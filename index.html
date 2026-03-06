@@ -3,252 +3,201 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anti-Bribery & Corruption Training</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Anti-Bribery & Corruption Training — SuperApp Group</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --navy: #0f1e35;
-    --navy-light: #162944;
-    --gold: #c9a84c;
-    --gold-light: #e8c97a;
-    --cream: #f5f0e8;
-    --red: #c0392b;
-    --green: #1a7a4a;
-    --blue: #1a56a0;
-    --text: #1a1a2e;
-    --muted: #6b7280;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); min-height: 100vh; }
+:root {
+  --navy:#0f1e35; --navy2:#162944; --gold:#c9a84c; --gold2:#e8c97a;
+  --cream:#f5f0e8; --red:#c0392b; --green:#1a7a4a; --blue:#1a56a0;
+  --text:#1a1a2e; --muted:#6b7280; --border:#e5e7eb;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;}
 
-  /* HEADER */
-  header {
-    background: var(--navy);
-    padding: 18px 40px;
-    display: flex; align-items: center; justify-content: space-between;
-    position: sticky; top: 0; z-index: 100;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.35);
-  }
-  .logo { display: flex; align-items: center; gap: 12px; }
-  .logo-icon { width: 36px; height: 36px; background: var(--gold); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 17px; }
-  .logo-text { font-family: 'DM Serif Display', serif; color: var(--cream); font-size: 17px; line-height: 1.2; }
-  .logo-sub { font-size: 10px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; font-family: 'DM Sans', sans-serif; font-weight: 500; }
-  .progress-bar-wrap { display: flex; align-items: center; gap: 12px; }
-  .progress-label { color: var(--gold); font-size: 13px; font-weight: 500; }
-  .progress-track { width: 160px; height: 6px; background: rgba(255,255,255,0.15); border-radius: 99px; overflow: hidden; }
-  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 99px; transition: width 0.5s ease; width: 0%; }
+/* HEADER */
+header{background:var(--navy);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 20px rgba(0,0,0,0.4);}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-icon{width:34px;height:34px;background:var(--gold);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;}
+.logo-text{font-family:'DM Serif Display',serif;color:var(--cream);font-size:16px;line-height:1.2;}
+.logo-sub{font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-weight:600;}
+.hdr-right{display:flex;align-items:center;gap:16px;}
+.prog-label{color:var(--gold);font-size:12px;font-weight:600;}
+.prog-track{width:140px;height:5px;background:rgba(255,255,255,0.15);border-radius:99px;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:99px;transition:width 0.6s ease;width:0%;}
 
-  /* HERO BANNER */
-  .hero {
-    background: linear-gradient(135deg, #0f1e35 0%, #1a56a0 100%);
-    padding: 48px 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: repeating-linear-gradient(45deg, transparent, transparent 50px, rgba(255,255,255,0.02) 50px, rgba(255,255,255,0.02) 100px);
-  }
-  .hero-inner { position: relative; z-index: 1; }
-  .hero-tag { display: inline-block; background: var(--gold); color: var(--navy); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 14px; border-radius: 99px; margin-bottom: 16px; }
-  .hero h1 { font-family: 'DM Serif Display', serif; color: white; font-size: 36px; line-height: 1.2; margin-bottom: 12px; }
-  .hero p { color: rgba(255,255,255,0.75); font-size: 15px; max-width: 560px; margin: 0 auto 20px; line-height: 1.7; }
-  .hero-meta { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
-  .hero-meta-item { color: rgba(255,255,255,0.6); font-size: 13px; }
-  .hero-meta-item strong { color: var(--gold); display: block; font-size: 14px; }
+/* HERO */
+.hero{background:linear-gradient(135deg,#0f1e35,#1a56a0);padding:44px 32px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 80px);}
+.hero-inner{position:relative;z-index:1;}
+.hero-tag{display:inline-block;background:var(--gold);color:var(--navy);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 14px;border-radius:99px;margin-bottom:14px;}
+.hero h1{font-family:'DM Serif Display',serif;color:white;font-size:34px;line-height:1.2;margin-bottom:10px;}
+.hero p{color:rgba(255,255,255,0.72);font-size:14px;max-width:520px;margin:0 auto 18px;line-height:1.7;}
+.hero-meta{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;}
+.hm{color:rgba(255,255,255,0.55);font-size:12px;text-align:center;}
+.hm strong{color:var(--gold);display:block;font-size:13px;}
 
-  /* CONTAINER */
-  .container { max-width: 880px; margin: 0 auto; padding: 36px 24px 80px; }
+/* CONTAINER */
+.container{max-width:860px;margin:0 auto;padding:32px 20px 80px;}
 
-  /* MODULE */
-  .module { background: white; border-radius: 16px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); border: 1px solid rgba(0,0,0,0.06); }
-  .module-header { padding: 20px 28px; display: flex; align-items: center; gap: 16px; cursor: pointer; user-select: none; }
-  .module-num { width: 40px; height: 40px; min-width: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; background: var(--navy); color: var(--gold); font-family: 'DM Serif Display', serif; }
-  .module-num.done { background: var(--green); color: white; }
-  .module-num.locked { background: #e5e7eb; color: #9ca3af; }
-  .module-title-wrap { flex: 1; }
-  .module-title { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--navy); }
-  .module-subtitle { font-size: 13px; color: var(--muted); margin-top: 2px; }
-  .module-badge { font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 99px; letter-spacing: 0.5px; text-transform: uppercase; }
-  .badge-locked { background: #f3f4f6; color: #9ca3af; }
-  .badge-active { background: #fef3c7; color: #92400e; }
-  .badge-done { background: #d1fae5; color: #065f46; }
+/* MODULE CARD */
+.module{background:white;border-radius:14px;margin-bottom:16px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,0.07);border:1px solid var(--border);}
+.mod-header{padding:18px 24px;display:flex;align-items:center;gap:14px;cursor:pointer;user-select:none;transition:background 0.2s;}
+.mod-header:hover{background:#fafafa;}
+.mod-num{width:38px;height:38px;min-width:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;background:var(--navy);color:var(--gold);font-family:'DM Serif Display',serif;transition:all 0.3s;}
+.mod-num.done{background:var(--green);color:white;}
+.mod-num.locked{background:#e5e7eb;color:#9ca3af;}
+.mod-title-wrap{flex:1;}
+.mod-title{font-family:'DM Serif Display',serif;font-size:17px;color:var(--navy);}
+.mod-sub{font-size:12px;color:var(--muted);margin-top:2px;}
+.mod-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:99px;letter-spacing:0.5px;text-transform:uppercase;}
+.b-locked{background:#f3f4f6;color:#9ca3af;}
+.b-active{background:#fef3c7;color:#92400e;}
+.b-done{background:#d1fae5;color:#065f46;}
+.mod-body{display:none;border-top:1px solid #f0f0f0;}
+.mod-body.open{display:block;}
 
-  /* MODULE BODY */
-  .module-body { display: none; padding: 0 28px 28px; border-top: 1px solid #f0f0f0; }
-  .module-body.open { display: block; }
+/* PAGE SYSTEM */
+.page{display:none;padding:28px 28px 24px;}
+.page.active{display:block;}
 
-  /* SLIDE */
-  .slide { background: var(--navy); border-radius: 12px; padding: 28px 32px; margin: 20px 0; position: relative; overflow: hidden; }
-  .slide::before { content: ''; position: absolute; top: -40px; right: -40px; width: 140px; height: 140px; border-radius: 50%; background: rgba(201,168,76,0.07); }
-  .slide-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
-  .slide h3 { font-family: 'DM Serif Display', serif; color: white; font-size: 20px; margin-bottom: 14px; line-height: 1.3; }
-  .slide p { color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.7; }
-  .slide-points { margin: 14px 0 0; list-style: none; }
-  .slide-points li { color: rgba(255,255,255,0.85); font-size: 14px; padding: 7px 0 7px 22px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.06); line-height: 1.5; }
-  .slide-points li:last-child { border-bottom: none; }
-  .slide-points li::before { content: '▸'; color: var(--gold); position: absolute; left: 0; }
+/* PAGE HEADER */
+.page-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+.page-breadcrumb{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.page-dots{display:flex;gap:6px;}
+.dot{width:8px;height:8px;border-radius:50%;background:#e5e7eb;transition:all 0.3s;}
+.dot.done{background:var(--green);}
+.dot.active{background:var(--gold);transform:scale(1.3);}
 
-  /* TWO-COL */
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
-  .col-card { background: var(--navy); border-radius: 12px; padding: 24px; }
-  .col-card h4 { font-family: 'DM Serif Display', serif; color: var(--gold); font-size: 18px; margin-bottom: 10px; }
-  .col-card p { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.6; }
-  .col-card ul { margin-top: 10px; list-style: none; }
-  .col-card ul li { color: rgba(255,255,255,0.8); font-size: 13px; padding: 5px 0 5px 18px; position: relative; line-height: 1.5; }
-  .col-card ul li::before { content: '•'; color: var(--gold); position: absolute; left: 0; }
+/* SLIDE */
+.slide{background:var(--navy);border-radius:12px;padding:26px 30px;margin:0 0 18px;position:relative;overflow:hidden;}
+.slide::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:rgba(201,168,76,0.06);}
+.slide-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px;}
+.slide h3{font-family:'DM Serif Display',serif;color:white;font-size:19px;margin-bottom:12px;line-height:1.3;}
+.slide p{color:rgba(255,255,255,0.8);font-size:13.5px;line-height:1.75;}
+.slide p+p{margin-top:10px;}
+.pts{margin:12px 0 0;list-style:none;}
+.pts li{color:rgba(255,255,255,0.85);font-size:13.5px;padding:7px 0 7px 20px;position:relative;border-bottom:1px solid rgba(255,255,255,0.06);line-height:1.55;}
+.pts li:last-child{border-bottom:none;}
+.pts li::before{content:'▸';color:var(--gold);position:absolute;left:0;}
 
-  /* CASE STUDY */
-  .case-study { background: #1a1a2e; border-left: 4px solid var(--red); border-radius: 0 12px 12px 0; padding: 22px 26px; margin: 20px 0; }
-  .case-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 10px; }
-  .case-study h4 { font-family: 'DM Serif Display', serif; color: white; font-size: 17px; margin-bottom: 12px; }
-  .case-study p { color: rgba(255,255,255,0.75); font-size: 13px; line-height: 1.7; margin-bottom: 8px; }
-  .verdict { background: rgba(192,57,43,0.15); border-radius: 8px; padding: 12px 16px; margin-top: 12px; }
-  .verdict strong { color: var(--red); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; display: block; margin-bottom: 4px; }
-  .verdict p { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.6; margin: 0; }
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;}
+.col-card{background:var(--navy);border-radius:12px;padding:22px;}
+.col-card h4{font-family:'DM Serif Display',serif;color:var(--gold);font-size:17px;margin-bottom:10px;}
+.col-card p{color:rgba(255,255,255,0.8);font-size:13px;line-height:1.6;}
+.col-card ul{margin-top:8px;list-style:none;}
+.col-card ul li{color:rgba(255,255,255,0.8);font-size:13px;padding:5px 0 5px 16px;position:relative;line-height:1.5;}
+.col-card ul li::before{content:'•';color:var(--gold);position:absolute;left:0;}
 
-  /* PENALTY TABLE */
-  .penalty-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 20px 0; }
-  .penalty-card { background: var(--navy); border-radius: 12px; padding: 22px; }
-  .penalty-card .ptitle { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-  .penalty-card .psub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
-  .penalty-card ul { list-style: none; }
-  .penalty-card ul li { color: rgba(255,255,255,0.85); font-size: 13px; padding: 6px 0 6px 18px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.06); line-height: 1.5; }
-  .penalty-card ul li:last-child { border-bottom: none; }
-  .penalty-card ul li::before { content: '▸'; color: var(--gold); position: absolute; left: 0; }
+/* THREE COL */
+.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:18px;}
 
-  /* POLICY GRID */
-  .policy-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 20px 0; }
-  .policy-card { background: var(--navy); border-radius: 12px; padding: 22px; }
-  .policy-card h4 { font-family: 'DM Serif Display', serif; color: var(--gold); font-size: 15px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .policy-card ul { list-style: none; }
-  .policy-card ul li { color: rgba(255,255,255,0.8); font-size: 13px; padding: 5px 0 5px 18px; position: relative; line-height: 1.5; }
-  .policy-card ul li::before { content: '▸'; color: var(--gold); position: absolute; left: 0; }
-  .policy-card .no-tag { display: inline-block; background: var(--red); color: white; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 10px; letter-spacing: 1px; }
-  .policy-card .yes-tag { display: inline-block; background: var(--green); color: white; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 10px; letter-spacing: 1px; }
+/* CASE STUDY */
+.case{background:#1a1a2e;border-left:4px solid var(--red);border-radius:0 12px 12px 0;padding:20px 24px;margin-bottom:16px;}
+.case-lbl{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:8px;}
+.case h4{font-family:'DM Serif Display',serif;color:white;font-size:16px;margin-bottom:10px;}
+.case p{color:rgba(255,255,255,0.75);font-size:13px;line-height:1.7;margin-bottom:6px;}
+.verdict{background:rgba(192,57,43,0.15);border-radius:8px;padding:10px 14px;margin-top:10px;}
+.verdict strong{color:var(--red);font-size:11px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:4px;}
+.verdict p{color:rgba(255,255,255,0.8);font-size:13px;line-height:1.6;margin:0;}
 
-  /* VIDEO */
-  .video-section { margin: 24px 0; }
-  .video-label { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-  .video-must-watch { display: flex; align-items: center; gap: 8px; background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; padding: 10px 14px; font-size: 13px; color: #92400e; font-weight: 500; margin-bottom: 10px; }
-  .video-wrap { position: relative; border-radius: 12px; overflow: hidden; background: #000; aspect-ratio: 16/9; }
-  .video-wrap iframe { width: 100%; height: 100%; border: none; pointer-events: none; }
-  .video-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 60px; z-index: 10; cursor: not-allowed; }
-  .video-bottom-block { position: absolute; bottom: 0; left: 0; right: 0; height: 60px; z-index: 10; cursor: not-allowed; }
-  .video-timer { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.75); color: white; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 99px; z-index: 20; }
+/* INFO CARDS */
+.info-card{background:var(--navy);border-radius:12px;padding:20px;}
+.info-card .ic-title{font-family:'DM Serif Display',serif;color:var(--gold);font-size:14px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.1);}
+.info-card ul{list-style:none;}
+.info-card ul li{color:rgba(255,255,255,0.8);font-size:12.5px;padding:5px 0 5px 16px;position:relative;line-height:1.5;}
+.info-card ul li::before{content:'▸';color:var(--gold);position:absolute;left:0;}
+.no-tag{display:inline-block;background:var(--red);color:white;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:8px;letter-spacing:1px;}
+.yes-tag{display:inline-block;background:var(--green);color:white;font-size:9px;font-weight:700;padding:2px 8px;border-radius:4px;margin-bottom:8px;letter-spacing:1px;}
 
-  /* SECTION DIVIDER */
-  .section-divider { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 24px 0 12px; padding-left: 4px; }
+/* SCENARIO */
+.scenario{background:#f8f9fb;border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:18px 22px;margin-bottom:16px;}
+.sc-lbl{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#92400e;font-weight:700;margin-bottom:8px;}
+.scenario p{font-size:13.5px;line-height:1.7;color:var(--navy);font-style:italic;}
+.choices{margin-top:14px;display:flex;flex-direction:column;gap:8px;}
+.choice-btn{background:white;border:2px solid var(--border);border-radius:10px;padding:11px 16px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text);cursor:pointer;text-align:left;transition:all 0.2s;line-height:1.5;}
+.choice-btn:hover:not(:disabled){border-color:var(--navy);background:#f0f4ff;}
+.choice-btn.correct{border-color:var(--green);background:#f0fdf4;color:var(--green);font-weight:600;}
+.choice-btn.wrong{border-color:var(--red);background:#fef2f2;color:var(--red);}
+.feedback{display:none;margin-top:12px;padding:11px 14px;border-radius:10px;font-size:13px;line-height:1.6;font-weight:500;}
+.feedback.correct{background:#d1fae5;color:#065f46;}
+.feedback.wrong{background:#fee2e2;color:#991b1b;}
+.feedback.show{display:block;}
 
-  /* SCENARIO */
-  .scenario { background: #f8f9fb; border-left: 4px solid var(--gold); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 20px 0; }
-  .scenario-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #92400e; font-weight: 700; margin-bottom: 10px; }
-  .scenario p { font-size: 14px; line-height: 1.7; color: var(--navy); font-style: italic; }
-  .choices { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
-  .choice-btn { background: white; border: 2px solid #e5e7eb; border-radius: 10px; padding: 12px 18px; font-size: 13px; font-family: 'DM Sans', sans-serif; color: var(--text); cursor: pointer; text-align: left; transition: all 0.2s; line-height: 1.5; }
-  .choice-btn:hover:not(:disabled) { border-color: var(--navy); background: #f0f4ff; }
-  .choice-btn.correct { border-color: var(--green); background: #f0fdf4; color: var(--green); font-weight: 600; }
-  .choice-btn.wrong { border-color: var(--red); background: #fef2f2; color: var(--red); }
-  .feedback { display: none; margin-top: 14px; padding: 12px 16px; border-radius: 10px; font-size: 13px; line-height: 1.6; font-weight: 500; }
-  .feedback.correct { background: #d1fae5; color: #065f46; display: none; }
-  .feedback.wrong { background: #fee2e2; color: #991b1b; display: none; }
+/* DIVIDER */
+.divider{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;margin:20px 0 10px;padding-left:2px;}
 
-  /* LINKS */
-  .links-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 20px 0; }
-  .link-card { background: var(--blue); border-radius: 10px; padding: 18px; text-align: center; }
-  .link-card a { color: white; font-size: 13px; font-weight: 600; text-decoration: underline; line-height: 1.4; display: block; }
+/* LINKS */
+.lgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.lcard{background:var(--blue);border-radius:10px;padding:16px;text-align:center;}
+.lcard a{color:white;font-size:12.5px;font-weight:600;text-decoration:underline;line-height:1.4;display:block;}
 
-  /* COMPLETE BUTTON */
-  .complete-btn { margin-top: 24px; background: var(--navy); color: var(--gold); border: none; padding: 14px 30px; border-radius: 10px; font-size: 14px; font-weight: 600; font-family: 'DM Sans', sans-serif; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.2s; opacity: 0.4; pointer-events: none; }
-  .complete-btn.ready { opacity: 1; pointer-events: auto; }
-  .complete-btn.ready:hover { background: var(--gold); color: var(--navy); transform: translateY(-1px); }
+/* PAGE FOOTER — timer + button */
+.page-footer{display:flex;align-items:center;justify-content:space-between;margin-top:20px;padding-top:16px;border-top:1px solid var(--border);}
+.timer-pill{display:flex;align-items:center;gap:7px;background:var(--navy);color:var(--gold);font-size:12px;font-weight:600;padding:7px 14px;border-radius:99px;}
+.next-btn{background:var(--navy);color:var(--gold);border:none;padding:12px 24px;border-radius:10px;font-size:13px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all 0.2s;opacity:0.35;pointer-events:none;}
+.next-btn.ready{opacity:1;pointer-events:auto;}
+.next-btn.ready:hover{background:var(--gold);color:var(--navy);}
 
-  /* LOCKED */
-  .locked-msg { text-align: center; padding: 32px; color: var(--muted); font-size: 14px; }
-  .locked-msg .lock-icon { font-size: 32px; margin-bottom: 10px; }
+/* LOCKED */
+.locked-msg{text-align:center;padding:28px;color:var(--muted);font-size:14px;}
+.locked-msg .li{font-size:30px;margin-bottom:8px;}
 
-  /* CERT */
-  .cert { display: none; background: var(--navy); border-radius: 16px; padding: 48px; text-align: center; margin-top: 32px; position: relative; overflow: hidden; }
-  .cert.show { display: block; }
-  .cert::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(201,168,76,0.04) 40px, rgba(201,168,76,0.04) 80px); }
-  .cert-inner { position: relative; z-index: 1; }
-  .cert-medal { font-size: 60px; margin-bottom: 14px; }
-  .cert h2 { font-family: 'DM Serif Display', serif; color: var(--gold); font-size: 30px; margin-bottom: 8px; }
-  .cert p { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.6; }
-  .cert-date { color: var(--gold); font-size: 13px; margin-top: 16px; font-weight: 500; }
+/* QUIZ */
+.quiz-wrap{padding:28px;}
+.quiz-header{text-align:center;margin-bottom:28px;}
+.quiz-header h2{font-family:'DM Serif Display',serif;font-size:26px;color:var(--navy);margin-bottom:8px;}
+.quiz-header p{color:var(--muted);font-size:14px;}
+.quiz-q{background:white;border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:14px;box-shadow:0 1px 6px rgba(0,0,0,0.05);}
+.quiz-q .qnum{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+.quiz-q .qtext{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:14px;line-height:1.5;}
+.quiz-opts{display:flex;flex-direction:column;gap:8px;}
+.quiz-opt{background:#f9fafb;border:2px solid var(--border);border-radius:8px;padding:10px 14px;font-size:13px;font-family:'DM Sans',sans-serif;color:var(--text);cursor:pointer;text-align:left;transition:all 0.2s;line-height:1.5;}
+.quiz-opt:hover:not(:disabled){border-color:var(--navy);background:#f0f4ff;}
+.quiz-opt.correct{border-color:var(--green);background:#f0fdf4;color:var(--green);font-weight:600;}
+.quiz-opt.wrong{border-color:var(--red);background:#fef2f2;color:var(--red);}
+.quiz-feedback{display:none;margin-top:10px;padding:10px 14px;border-radius:8px;font-size:12.5px;line-height:1.6;font-weight:500;}
+.quiz-feedback.correct{background:#d1fae5;color:#065f46;display:block;}
+.quiz-feedback.wrong{background:#fee2e2;color:#991b1b;display:block;}
+.quiz-submit{display:block;width:100%;margin-top:24px;background:var(--navy);color:var(--gold);border:none;padding:15px;border-radius:12px;font-size:15px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all 0.2s;opacity:0.35;pointer-events:none;}
+.quiz-submit.ready{opacity:1;pointer-events:auto;}
+.quiz-submit.ready:hover{background:var(--gold);color:var(--navy);}
+.quiz-result{display:none;text-align:center;padding:32px 20px;background:var(--navy);border-radius:14px;margin-top:20px;}
+.quiz-result.show{display:block;}
+.qr-icon{font-size:56px;margin-bottom:14px;}
+.qr-score{font-family:'DM Serif Display',serif;font-size:48px;color:var(--gold);margin-bottom:8px;}
+.qr-msg{color:rgba(255,255,255,0.85);font-size:16px;margin-bottom:20px;}
+.qr-retry{background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.2);padding:12px 28px;border-radius:10px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all 0.2s;}
+.qr-retry:hover{background:rgba(255,255,255,0.18);}
+.qr-claim{background:var(--gold);color:var(--navy);border:none;padding:12px 28px;border-radius:10px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all 0.2s;margin-left:10px;}
+.qr-claim:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,168,76,0.4);}
 
-  /* SIGN-OFF CARD */
-  .signoff-card {
-    background: white;
-    border-radius: 16px;
-    margin-top: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-    border: 2px solid var(--gold);
-  }
-  .signoff-inner {
-    padding: 40px;
-    text-align: center;
-  }
-  .signoff-icon { font-size: 48px; margin-bottom: 16px; }
-  .signoff-inner h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 24px;
-    color: var(--navy);
-    margin-bottom: 14px;
-  }
-  .signoff-inner p {
-    color: var(--muted);
-    font-size: 15px;
-    line-height: 1.7;
-    max-width: 520px;
-    margin: 0 auto 12px;
-  }
-  .signoff-note {
-    background: #fef3c7;
-    border-radius: 8px;
-    padding: 10px 16px !important;
-    font-size: 13px !important;
-    color: #92400e !important;
-    display: inline-block;
-    margin-bottom: 24px !important;
-  }
-  .signoff-btn {
-    display: inline-block;
-    background: var(--navy);
-    color: var(--gold);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 16px 40px;
-    border-radius: 12px;
-    transition: all 0.2s;
-    margin-bottom: 16px;
-    letter-spacing: 0.3px;
-  }
-  .signoff-btn:hover {
-    background: var(--gold);
-    color: var(--navy);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(201,168,76,0.35);
-  }
-  .signoff-small {
-    font-size: 12px !important;
-    color: #9ca3af !important;
-    margin-top: 4px;
-  }
+/* CERT */
+.cert{display:none;background:var(--navy);border-radius:14px;padding:44px;text-align:center;margin-top:28px;position:relative;overflow:hidden;}
+.cert.show{display:block;}
+.cert::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(201,168,76,0.04) 40px,rgba(201,168,76,0.04) 80px);}
+.cert-inner{position:relative;z-index:1;}
+.cert-medal{font-size:56px;margin-bottom:12px;}
+.cert h2{font-family:'DM Serif Display',serif;color:var(--gold);font-size:28px;margin-bottom:8px;}
+.cert p{color:rgba(255,255,255,0.8);font-size:14px;line-height:1.7;}
+.cert-date{color:var(--gold);font-size:12px;margin-top:14px;font-weight:600;}
 
-  @media (max-width: 640px) {
-    .two-col, .penalty-grid, .policy-grid, .links-grid { grid-template-columns: 1fr; }
-    header { padding: 14px 16px; }
-    .hero { padding: 32px 20px; }
-    .hero h1 { font-size: 26px; }
-    .module-header { padding: 16px 18px; }
-    .module-body { padding: 0 18px 22px; }
-    .progress-track { width: 100px; }
-  }
+/* SIGNOFF */
+.signoff{background:white;border-radius:14px;margin-top:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.1);border:2px solid var(--gold);}
+.signoff-inner{padding:36px;text-align:center;}
+.signoff-icon{font-size:44px;margin-bottom:14px;}
+.signoff-inner h3{font-family:'DM Serif Display',serif;font-size:22px;color:var(--navy);margin-bottom:12px;}
+.signoff-inner p{color:var(--muted);font-size:14px;line-height:1.7;max-width:500px;margin:0 auto 10px;}
+.signoff-note{background:#fef3c7;border-radius:8px;padding:9px 14px!important;font-size:12px!important;color:#92400e!important;display:inline-block;margin-bottom:20px!important;}
+.signoff-btn{display:inline-block;background:var(--navy);color:var(--gold);text-decoration:none;font-size:15px;font-weight:700;padding:14px 36px;border-radius:12px;transition:all 0.2s;margin-bottom:12px;}
+.signoff-btn:hover{background:var(--gold);color:var(--navy);}
+.signoff-small{font-size:11px!important;color:#9ca3af!important;}
+
+@media(max-width:640px){
+  .two-col,.three-col,.lgrid{grid-template-columns:1fr;}
+  header{padding:12px 16px;} .hero{padding:30px 16px;} .hero h1{font-size:26px;}
+  .page{padding:18px 16px 16px;} .prog-track{width:90px;}
+}
 </style>
 </head>
 <body>
@@ -258,361 +207,759 @@
     <div class="logo-icon">⚖️</div>
     <div>
       <div class="logo-text">SuperApp Group</div>
-      <div class="logo-sub">ABC Training </div>
+      <div class="logo-sub">ABC Training</div>
     </div>
   </div>
-  <div class="progress-bar-wrap">
-    <span class="progress-label" id="progressLabel">0% Complete</span>
-    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="hdr-right">
+    <span class="prog-label" id="progLabel">0% Complete</span>
+    <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
   </div>
 </header>
 
 <div class="hero">
   <div class="hero-inner">
     <div class="hero-tag">Mandatory Compliance Training</div>
-    <h1>Anti-Bribery &amp; Corruption<br>Training </h1>
-    <p>For Board Members and All Employees</p>
+    <h1>Anti-Bribery &amp; Corruption<br>Training</h1>
+    <p>For Board Members and All Employees of SuperApp Group. Complete all modules and pass the final quiz to receive your certificate.</p>
     <div class="hero-meta">
-      <div class="hero-meta-item"><strong>4 Modules</strong>Topics covered</div>
-      <div class="hero-meta-item"><strong>MACC Act 2009</strong>Legal framework</div>
-      <div class="hero-meta-item"><strong>Certificate</strong>Upon completion</div>
+      <div class="hm"><strong>4 Modules</strong>17 topics</div>
+      <div class="hm"><strong>~25 Minutes</strong>Estimated time</div>
+      <div class="hm"><strong>70% Pass Mark</strong>Final quiz</div>
+      <div class="hm"><strong>Certificate</strong>Upon completion</div>
     </div>
   </div>
 </div>
 
 <div class="container">
 
-<!-- ══════════════════════════════════════════════════════
-     MODULE 1 — MACC & DEFINITIONS
+<!-- ═══════════════════════════════════════════════════════
+     MODULE 1 — MACC & DEFINITIONS (4 pages)
 ═══════════════════════════════════════════════════════ -->
 <div class="module" id="mod1">
-  <div class="module-header" onclick="toggleModule(1)">
-    <div class="module-num" id="num1">1</div>
-    <div class="module-title-wrap">
-      <div class="module-title">MACC, Bribery &amp; Corruption — The Basics</div>
-      <div class="module-subtitle">What is MACC, definitions, types of bribe</div>
+  <div class="mod-header" onclick="toggleMod(1)">
+    <div class="mod-num" id="num1">1</div>
+    <div class="mod-title-wrap">
+      <div class="mod-title">MACC, Bribery &amp; Corruption — The Basics</div>
+      <div class="mod-sub">4 topics · ~5 minutes</div>
     </div>
-    <span class="module-badge badge-active" id="badge1">In Progress</span>
+    <span class="mod-badge b-active" id="badge1">In Progress</span>
   </div>
-  <div class="module-body open" id="body1">
+  <div class="mod-body open" id="body1">
 
-    <div class="slide">
-      <div class="slide-label">🏛️ What is MACC?</div>
-      <h3>Malaysian Anti-Corruption Commission (SPRM)</h3>
-      <p>MACC (Suruhanjaya Pencegahan Rasuah Malaysia) is Malaysia's primary anti-corruption authority, established in 2009 under the Malaysian Anti-Corruption Commission Act 2009.</p>
-      <ul class="slide-points">
-        <li>Eradicate <strong>corruption</strong> in public and private sectors</li>
-        <li>Eradicate <strong>abuse of power</strong> by officials and employees</li>
-        <li>Eradicate <strong>malpractice</strong> in business and government dealings</li>
-      </ul>
-    </div>
-
-    <div class="two-col">
-      <div class="col-card">
-        <h4>Bribe</h4>
-        <p>A <em>type</em> of corruption. It refers to the act of corruptly:</p>
-        <ul>
-          <li>Authorising a payment or benefit</li>
-          <li>Giving something of value</li>
-          <li>Receiving any gratification</li>
+    <!-- PAGE 1.1 -->
+    <div class="page active" id="p1-1">
+      <div class="page-hdr">
+        <span class="page-breadcrumb">Module 1 · Topic 1 of 4</span>
+        <div class="page-dots" id="dots1"></div>
+      </div>
+      <div class="slide">
+        <div class="slide-lbl">🏛️ What is MACC?</div>
+        <h3>Malaysian Anti-Corruption Commission (SPRM)</h3>
+        <p>The Malaysian Anti-Corruption Commission (MACC), or Suruhanjaya Pencegahan Rasuah Malaysia (SPRM), is Malaysia's primary law enforcement agency dedicated to fighting corruption. It was established in 2009 under the Malaysian Anti-Corruption Commission Act 2009, replacing the previous Anti-Corruption Agency (ACA).</p>
+        <p>MACC operates independently and has broad investigative powers over both public officials and private sector individuals. It works alongside the Attorney General's Chambers to prosecute corruption offences.</p>
+        <ul class="pts">
+          <li><strong>Eradicate corruption</strong> — investigating and prosecuting corrupt acts in public and private sectors</li>
+          <li><strong>Eradicate abuse of power</strong> — holding officials accountable for misusing their position</li>
+          <li><strong>Eradicate malpractice</strong> — addressing fraudulent and dishonest conduct in business and government</li>
+          <li><strong>Prevention &amp; education</strong> — training, awareness campaigns, and advisory services to organisations</li>
         </ul>
       </div>
-      <div class="col-card">
-        <h4>Corruption</h4>
-        <p>The act of giving or receiving any gratification or reward in the form of cash or in-kind of high value for performing a task in relation to one's job.</p>
+      <div class="slide">
+        <div class="slide-lbl">📋 Why This Matters to You</div>
+        <h3>SuperApp Group's Commitment</h3>
+        <p>SuperApp Group is committed to conducting business ethically and in compliance with all applicable anti-bribery and corruption laws. This applies to every employee, director, agent, and third party acting on the Group's behalf — regardless of seniority or location.</p>
+        <p>As an employee, you are personally responsible for understanding and following our Anti-Bribery and Corruption (ABC) Policy. Ignorance of the policy is not a defence.</p>
+      </div>
+      <div class="page-footer">
+        <div class="timer-pill" id="timer1-1">⏱ <span id="tspan1-1">60s</span></div>
+        <button class="next-btn" id="next1-1" onclick="nextPage(1,2)">Next Topic →</button>
       </div>
     </div>
 
-    <div class="slide">
-      <div class="slide-label">💰 Types of Bribe</div>
-      <h3>Bribes Come in Many Forms</h3>
-      <p>A bribe is not always cash. Be aware of all the ways gratification can be offered or received:</p>
-      <ul class="slide-points">
-        <li><strong>Cash</strong> — Direct monetary payments</li>
-        <li><strong>Gifts &amp; Entertainment</strong> — Vouchers, hampers, meals, events, luxury items</li>
-        <li><strong>Travel &amp; Events</strong> — Paid trips, cruises, concert tickets, sponsored holidays</li>
-        <li><strong>Charity / Political Donations</strong> — Made on your behalf to conceal the bribe</li>
-        <li><strong>Preferential Selection</strong> — Awarding a job or contract to a family member or associated vendor in exchange for personal gain</li>
-      </ul>
-    </div>
-
-    <div class="scenario">
-      <div class="scenario-label">🎭 Scenario — What would you do?</div>
-      <p>During the festive season, a supplier sends your home address a hamper worth RM800 with a card saying "Thank you for your continued support — looking forward to renewing our contract next quarter." What should you do?</p>
-      <div class="choices" id="sc1">
-        <button class="choice-btn" onclick="answer(1,'A','wrong')">A. Accept it — it's just a festive gift and doesn't affect my decisions</button>
-        <button class="choice-btn" onclick="answer(1,'B','correct')">B. Declare it to your manager, check against the company's GHE policy, and return it if it exceeds the threshold</button>
-        <button class="choice-btn" onclick="answer(1,'C','wrong')">C. Accept it but don't declare — it's a gift, not a bribe</button>
+    <!-- PAGE 1.2 -->
+    <div class="page" id="p1-2">
+      <div class="page-hdr">
+        <span class="page-breadcrumb">Module 1 · Topic 2 of 4</span>
+        <div class="page-dots" id="dots1b"></div>
       </div>
-      <div class="feedback correct" id="sc1-correct">✅ <strong>Correct!</strong> A high-value gift received just before a contract renewal is a red flag. Under SuperApp Group's GHE policy, all gifts must be declared. If it exceeds the acceptable threshold or could influence a business decision, it must be returned and reported to your compliance officer.</div>
-      <div class="feedback wrong" id="sc1-wrong">❌ <strong>Incorrect.</strong> Gifts timed around business decisions — especially of high value — fall under the definition of gratification. Even if your intentions are clean, accepting without declaring breaches Group policy and could expose you to MACC investigation. Always declare.</div>
+      <div class="two-col">
+        <div class="col-card">
+          <h4>What is a Bribe?</h4>
+          <p>A bribe is a <em>type</em> of corruption. It refers to the act of corruptly authorising, giving, or receiving any gratification — directly or indirectly — to influence a person's actions in their official or professional capacity.</p>
+          <ul>
+            <li>The giver and receiver are both guilty</li>
+            <li>It doesn't matter if the bribe "worked" or not</li>
+            <li>Even offering a bribe is a criminal offence</li>
+          </ul>
+        </div>
+        <div class="col-card">
+          <h4>What is Corruption?</h4>
+          <p>Corruption is the broader act of giving or receiving any gratification or reward — in cash or in-kind — of high value, for performing a task in relation to one's job.</p>
+          <ul>
+            <li>Includes abuse of position and authority</li>
+            <li>Can involve public officials or private individuals</li>
+            <li>False claims and fraud are also corruption offences</li>
+          </ul>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide-lbl">🔍 Key Concept</div>
+        <h3>What is "Gratification"?</h3>
+        <p>Under the MACC Act 2009, "gratification" is broadly defined and includes far more than just money. It covers any benefit, advantage, or promise given to influence behaviour — including gifts, loans, discounts, commissions, employment, and even sexual favours.</p>
+        <p>The key question is always: <strong>Was it given or received to influence a decision or action?</strong> If yes — it is potentially corrupt, regardless of the amount.</p>
+      </div>
+      <div class="page-footer">
+        <div class="timer-pill" id="timer1-2">⏱ <span id="tspan1-2">60s</span></div>
+        <button class="next-btn" id="next1-2" onclick="nextPage(1,3)">Next Topic →</button>
+      </div>
     </div>
 
-    <button class="complete-btn ready" id="btn1" onclick="completeModule(1,2)">✓ Mark Complete &amp; Continue</button>
+    <!-- PAGE 1.3 -->
+    <div class="page" id="p1-3">
+      <div class="page-hdr">
+        <span class="page-breadcrumb">Module 1 · Topic 3 of 4</span>
+        <div class="page-dots" id="dots1c"></div>
+      </div>
+      <div class="slide">
+        <div class="slide-lbl">💰 Types of Bribe</div>
+        <h3>Bribes Come in Many Forms — Not Just Cash</h3>
+        <p>One of the most common mistakes employees make is thinking a bribe must be a cash payment. In reality, gratification can take many forms:</p>
+        <ul class="pts">
+          <li><strong>Cash payments</strong> — Direct transfers, envelopes of money, electronic payments under fake invoice descriptions</li>
+          <li><strong>Gifts &amp; Entertainment</strong> — Luxury hampers, expensive watches, jewellery, concert tickets, free meals at high-end restaurants</li>
+          <li><strong>Travel &amp; Events</strong> — Sponsored overseas trips, cruises, paid holidays disguised as "study visits" or "factory tours"</li>
+          <li><strong>Charity / Political Donations</strong> — Donations made "on your behalf" to a charity or political party to create obligation or goodwill</li>
+          <li><strong>Preferential Hiring</strong> — Offering a job or internship to a public official's family member in exchange for contract approval</li>
+          <li><strong>Discounts &amp; Commissions</strong> — Special pricing, secret commissions, or kickbacks paid outside formal invoices</li>
+          <li><strong>Loans &amp; Credit</strong> — Interest-free or below-market loans that are never expected to be repaid</li>
+        </ul>
+      </div>
+      <div class="page-footer">
+        <div class="timer-pill" id="timer1-3">⏱ <span id="tspan1-3">75s</span></div>
+        <button class="next-btn" id="next1-3" onclick="nextPage(1,4)">Next Topic →</button>
+      </div>
+    </div>
+
+    <!-- PAGE 1.4 — SCENARIO -->
+    <div class="page" id="p1-4">
+      <div class="page-hdr">
+        <span class="page-breadcrumb">Module 1 · Topic 4 of 4 — Scenarios</span>
+        <div class="page-dots" id="dots1d"></div>
+      </div>
+
+      <div class="scenario">
+        <div class="sc-lbl">🎭 Scenario 1</div>
+        <p>During the festive season, a supplier sends your home address a hamper worth RM800 with a card saying "Thank you for your continued support — looking forward to renewing our contract next quarter." What should you do?</p>
+        <div class="choices" id="sc1a">
+          <button class="choice-btn" onclick="scAnswer('1a','A','wrong')">A. Accept it — it's just a festive gift and doesn't affect my decisions</button>
+          <button class="choice-btn" onclick="scAnswer('1a','B','correct')">B. Declare it to your manager and return it — it is timed to a contract renewal</button>
+          <button class="choice-btn" onclick="scAnswer('1a','C','wrong')">C. Accept it but don't declare — the value is below RM1,000 so it's fine</button>
+        </div>
+        <div class="feedback correct" id="sc1a-correct">✅ <strong>Correct!</strong> A gift timed to a contract renewal is a red flag regardless of value. Under SuperApp's GHE policy, all gifts must be declared. If it could influence a business decision, it must be returned and the incident reported to your compliance officer.</div>
+        <div class="feedback wrong" id="sc1a-wrong">❌ <strong>Incorrect.</strong> Value thresholds do not determine legality — context does. A gift received just before a contract decision is a classic sign of attempted bribery. Always declare gifts from business partners, no matter the value.</div>
+      </div>
+
+      <div class="scenario">
+        <div class="sc-lbl">🎭 Scenario 2</div>
+        <p>A vendor offers to pay for your team's "team building trip" to Bali, worth RM15,000 in total. They say it's just to build a better relationship. Your department manages their contract. What do you do?</p>
+        <div class="choices" id="sc1b">
+          <button class="choice-btn" onclick="scAnswer('1b','A','wrong')">A. Accept — it's a relationship-building activity, not a bribe</button>
+          <button class="choice-btn" onclick="scAnswer('1b','B','correct')">B. Decline and report the offer to the Risk &amp; Compliance Department</button>
+          <button class="choice-btn" onclick="scAnswer('1b','C','wrong')">C. Accept but declare it after the trip</button>
+        </div>
+        <div class="feedback correct" id="sc1b-correct">✅ <strong>Correct!</strong> A RM15,000 trip offered by a vendor whose contract you manage is a clear conflict of interest and a potential bribe in the form of travel and entertainment. Decline immediately and report it — this protects both you and the company.</div>
+        <div class="feedback wrong" id="sc1b-wrong">❌ <strong>Incorrect.</strong> Under the MACC Act, travel and entertainment can constitute gratification. Accepting a high-value trip from a vendor whose contract you control — even if declared — is a serious policy breach and potential criminal offence.</div>
+      </div>
+
+      <div class="page-footer">
+        <div style="font-size:12px;color:var(--muted);">Answer both scenarios to continue</div>
+        <button class="next-btn" id="next1-4" onclick="completeMod(1,2)">Complete Module 1 ✓</button>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     MODULE 2 — TYPES OF CORRUPTION & REAL CASES
+<!-- ═══════════════════════════════════════════════════════
+     MODULE 2 — CORRUPTION TYPES & REAL CASES (5 pages)
 ═══════════════════════════════════════════════════════ -->
 <div class="module" id="mod2">
-  <div class="module-header" onclick="toggleModule(2)">
-    <div class="module-num locked" id="num2">2</div>
-    <div class="module-title-wrap">
-      <div class="module-title">Types of Corruption Under MACC 2009 &amp; Real Cases</div>
-      <div class="module-subtitle">Sections 16, 17A, 18 &amp; 23 — with Malaysian court cases</div>
+  <div class="mod-header" onclick="toggleMod(2)">
+    <div class="mod-num locked" id="num2">2</div>
+    <div class="mod-title-wrap">
+      <div class="mod-title">Types of Corruption &amp; Real Cases</div>
+      <div class="mod-sub">5 topics · ~7 minutes</div>
     </div>
-    <span class="module-badge badge-locked" id="badge2">🔒 Locked</span>
+    <span class="mod-badge b-locked" id="badge2">🔒 Locked</span>
   </div>
-  <div class="module-body" id="body2">
-    <div class="locked-msg" id="locked2"><div class="lock-icon">🔒</div>Complete Module 1 to unlock.</div>
+  <div class="mod-body" id="body2">
+    <div class="locked-msg" id="locked2"><div class="li">🔒</div>Complete Module 1 to unlock.</div>
     <div id="content2" style="display:none">
 
-      <div class="slide">
-        <div class="slide-label">⚖️ MACC Act 2009</div>
-        <h3>Four Key Offences You Must Know</h3>
-        <ul class="slide-points">
-          <li><strong>Section 16</strong> — Soliciting or Receiving Gratification (Bribe)</li>
-          <li><strong>Section 17(A)</strong> — Offering or Giving Gratification (Bribe)</li>
-          <li><strong>Section 18</strong> — Intending to Deceive (False Claim)</li>
-          <li><strong>Section 23</strong> — Using Office or Position for Gratification / Abuse of Power</li>
-        </ul>
-      </div>
-
-      <div class="section-divider">📰 Real Cases — Sections 16 &amp; 17A</div>
-
-      <div class="case-study">
-        <div class="case-label">⚠️ Case Study — Section 16: Soliciting / Receiving a Bribe</div>
-        <h4>Rosmah Mansor — RM1.25 Billion Sarawak Solar Project</h4>
-        <p>Rosmah Mansor was found guilty of all three counts of corruption related to the RM1.25 billion Sarawak rural schools' solar energy project.</p>
-        <p>She had solicited RM187.5 million from a company managing director, through her former aide, as an inducement to help the company secure the contract. She was also found guilty of receiving RM5 million and RM1.5 million in cash bribes.</p>
-        <div class="verdict">
-          <strong>Verdict</strong>
-          <p>Sentenced to 10 years in prison for each of the three charges (concurrent). Fined RM970 million — or an additional 10 years in prison if unpaid.</p>
+      <!-- PAGE 2.1 -->
+      <div class="page active" id="p2-1">
+        <div class="page-hdr">
+          <span class="page-breadcrumb">Module 2 · Topic 1 of 5</span>
+        </div>
+        <div class="slide">
+          <div class="slide-lbl">⚖️ MACC Act 2009</div>
+          <h3>Four Key Corruption Offences</h3>
+          <p>The MACC Act 2009 sets out the main offences that employees and companies need to be aware of. These apply to both the public and private sectors.</p>
+          <ul class="pts">
+            <li><strong>Section 16</strong> — Soliciting or Receiving Gratification (Bribe): Asking for or accepting a bribe in connection with your job duties</li>
+            <li><strong>Section 17(A)</strong> — Offering or Giving Gratification (Bribe): Offering, giving, or promising a bribe to someone else</li>
+            <li><strong>Section 18</strong> — Intending to Deceive (False Claims): Submitting fraudulent claims or documents to deceive your employer or authorities</li>
+            <li><strong>Section 23</strong> — Using Office or Position for Gratification: Abusing your authority or official position to obtain personal benefit</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <div class="slide-lbl">⚠️ Important</div>
+          <h3>Corporate Liability — Section 17A</h3>
+          <p>Under the 2018 Amendment, Section 17A introduces <strong>corporate liability</strong>. This means SuperApp Group as a company can be prosecuted if a person associated with the Group — including employees, agents, subsidiaries, or contractors — commits a corruption offence to obtain a business advantage for the Group.</p>
+          <p>The only defence available to the company is to prove it had <strong>"adequate procedures"</strong> in place to prevent bribery. This is why our ABC Policy, training, and compliance programme exist — and why your participation matters.</p>
+        </div>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer2-1">⏱ <span id="tspan2-1">60s</span></div>
+          <button class="next-btn" id="next2-1" onclick="nextPage(2,2)">Next Topic →</button>
         </div>
       </div>
 
-      <div class="section-divider">📰 Real Cases — Section 18</div>
-
-      <div class="case-study">
-        <div class="case-label">⚠️ Case Study — Section 18: False Claims</div>
-        <h4>RM15 Million Fake Claims — Home Ministry C4i Contract</h4>
-        <p>Six individuals including a company director, a CFO, and two police officers were arrested for submitting false claims totalling RM15 million between 2022 and , related to a maintenance contract for the Command &amp; Control, Communication &amp; Computer Integration (C4i) system.</p>
-        <p>MACC raided 15 locations across Johor, Selangor, Putrajaya, and Kuala Lumpur. Four luxury vehicles worth RM1.3 million were seized, along with 51 frozen bank accounts and assets estimated at RM3.5 million.</p>
-        <div class="verdict">
-          <strong>Investigation Status</strong>
-          <p>Case investigated under Section 18 of MACC Act 2009 and Section 4(1) of the Anti-Money Laundering Act (AMLA).</p>
+      <!-- PAGE 2.2 -->
+      <div class="page" id="p2-2">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 2 · Topic 2 of 5</span></div>
+        <div class="divider">📰 Real Case — Section 16: Soliciting / Receiving a Bribe</div>
+        <div class="case">
+          <div class="case-lbl">⚠️ Case Study — Section 16 &amp; 17A</div>
+          <h4>Rosmah Mansor — RM1.25 Billion Sarawak Solar Energy Project</h4>
+          <p>Rosmah Mansor was found guilty of three counts of corruption in connection with the RM1.25 billion Sarawak rural schools solar energy project awarded to Jepak Holdings Sdn Bhd.</p>
+          <p>She had solicited RM187.5 million from the company's managing director through her former aide Rizal Mansor, as an inducement to help the company secure the contract. She was also found guilty of receiving RM5 million and RM1.5 million in separate cash bribes on two occasions.</p>
+          <p>The case demonstrated how soliciting and receiving bribes can occur through intermediaries — meaning the person who benefits does not need to directly accept the money.</p>
+          <div class="verdict">
+            <strong>Verdict</strong>
+            <p>10 years' imprisonment per charge (concurrent). Fined RM970 million — or an additional 10 years in prison if the fine is not paid.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-lbl">📌 Key Takeaway</div>
+          <h3>Intermediaries Are Not a Shield</h3>
+          <p>Routing a bribe through a third party — a spouse, aide, or agent — does not protect you from prosecution. Both the person who benefits and the intermediary can be charged. As an employee, never act as an intermediary for payments you know or suspect to be corrupt.</p>
+        </div>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer2-2">⏱ <span id="tspan2-2">60s</span></div>
+          <button class="next-btn" id="next2-2" onclick="nextPage(2,3)">Next Topic →</button>
         </div>
       </div>
 
-      <div class="section-divider">📰 Real Cases — Section 23</div>
-
-      <div class="case-study">
-        <div class="case-label">⚠️ Case Study — Section 23: Abuse of Position</div>
-        <h4>Health Officer Swings Contracts to Own Company</h4>
-        <p>An Assistant Environmental Health Officer in Papar was convicted on 20 counts of using his position to direct supply contracts — food and beverage, minor repairs, office supplies — to his own company, Riched Enterprise, obtaining bribes totalling RM30,793.</p>
-        <div class="verdict">
-          <strong>Verdict</strong>
-          <p>20 years total jail (1 year per charge, concurrent). Fined a total of RM240,670. The lesson: no amount is too small to attract prosecution.</p>
+      <!-- PAGE 2.3 -->
+      <div class="page" id="p2-3">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 2 · Topic 3 of 5</span></div>
+        <div class="divider">📰 Real Case — Section 18: False Claims</div>
+        <div class="case">
+          <div class="case-lbl">⚠️ Case Study — Section 18</div>
+          <h4>RM15 Million Fake Claims — Home Ministry C4i System Contract</h4>
+          <p>Six individuals — including a company director, a chief financial officer, and two police officers — were arrested for allegedly submitting false claims totalling RM15 million between 2022 and 2025 under a RM70 million maintenance contract for the Command &amp; Control, Communication &amp; Computer Integration (C4i) system.</p>
+          <p>The MACC raided 15 locations across Johor, Selangor, Putrajaya, and Kuala Lumpur, including ministry premises and company offices. The investigation uncovered that some support service work was either not done or not done as per the contract terms — yet invoices were submitted and approved.</p>
+          <p>Four luxury vehicles worth approximately RM1.3 million were seized, along with 51 frozen bank accounts — 30 belonging to individuals and 21 linked to companies — with total assets estimated at RM3.5 million.</p>
+          <div class="verdict">
+            <strong>Investigation Status</strong>
+            <p>Investigated under Section 18 of the MACC Act 2009 and Section 4(1) of the Anti-Money Laundering Act (AMLA).</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-lbl">📌 Key Takeaway</div>
+          <h3>False Claims Are a Criminal Offence</h3>
+          <p>Submitting any document — an invoice, expense claim, delivery order, or time sheet — that you know to be inaccurate or false is a criminal offence under Section 18. This applies whether you prepared the document, approved it, or simply passed it along knowing it was fraudulent. Always verify claims before processing or approving them.</p>
+        </div>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer2-3">⏱ <span id="tspan2-3">60s</span></div>
+          <button class="next-btn" id="next2-3" onclick="nextPage(2,4)">Next Topic →</button>
         </div>
       </div>
 
-      <!-- VIDEO -->
-      <div class="video-section">
-        <div class="video-must-watch">⚠️ You must watch the full video before continuing. Skipping is disabled.</div>
-        <div class="video-label">📹 Required Video — Understanding Corruption Offences</div>
-        <div class="video-wrap" id="videoWrap">
-          <!-- Replace VIDEO_ID with your actual YouTube video ID -->
-          <iframe id="trainingVideo"
-            src="https://www.youtube.com/embed/kgU9pOty5Uc?enablejsapi=1&controls=0&disablekb=1&rel=0&modestbranding=1&playsinline=1"
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          <div class="video-overlay"></div>
-          <div class="video-bottom-block"></div>
-          <div class="video-timer" id="videoTimer">⏱ Watch to unlock</div>
+      <!-- PAGE 2.4 -->
+      <div class="page" id="p2-4">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 2 · Topic 4 of 5</span></div>
+        <div class="divider">📰 Real Case — Section 23: Abuse of Position</div>
+        <div class="case">
+          <div class="case-lbl">⚠️ Case Study — Section 23</div>
+          <h4>Health Officer Directs Contracts to Own Company</h4>
+          <p>Henry, an Assistant Environmental Health Officer in Papar, was convicted on 20 counts of using his official position to direct supply and service contracts — including food and beverage supply for meetings, minor repair works at a rural clinic, printers, and office supplies — to his own company, Riched Enterprise.</p>
+          <p>Henry used his position to prepare and submit quotations for his own company, ensuring it was selected as the preferred supplier. The total value of bribes obtained through this scheme was RM30,793.</p>
+          <div class="verdict">
+            <strong>Verdict</strong>
+            <p>1 year imprisonment per charge (20 charges, concurrent) = 20 years total. Fined a total of RM240,670. No amount is too small to attract prosecution — the amounts here were as low as RM11,250 per contract.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-lbl">📌 Key Takeaway</div>
+          <h3>No Amount is Too Small</h3>
+          <p>Many employees think that small transactions fly under the radar. The Health Officer case proves otherwise — even contracts worth RM10,000–20,000 resulted in multiple criminal charges. If you are involved in any procurement, vendor selection, or approval process, you must never direct business to yourself, your family, or anyone you have a financial relationship with. Declare all conflicts of interest immediately.</p>
+        </div>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer2-4">⏱ <span id="tspan2-4">75s</span></div>
+          <button class="next-btn" id="next2-4" onclick="nextPage(2,5)">Next Topic →</button>
         </div>
       </div>
 
-      <div class="scenario">
-        <div class="scenario-label">🎭 Scenario — What would you do?</div>
-        <p>You are in the procurement team and your manager asks you to raise an invoice for RM50,000 to a vendor for "consulting services rendered" — but you know no such services were provided. Your manager assures you it has been "approved from the top." What do you do?</p>
-        <div class="choices" id="sc2">
-          <button class="choice-btn" onclick="answer(2,'A','wrong')">A. Proceed — if the manager approved it, it's not your responsibility</button>
-          <button class="choice-btn" onclick="answer(2,'B','correct')">B. Refuse to raise the invoice and report the matter confidentially to the compliance officer or ethics hotline</button>
-          <button class="choice-btn" onclick="answer(2,'C','wrong')">C. Raise the invoice but keep a personal copy just in case</button>
+      <!-- PAGE 2.5 — SCENARIOS -->
+      <div class="page" id="p2-5">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 2 · Topic 5 of 5 — Scenarios</span></div>
+
+        <div class="scenario">
+          <div class="sc-lbl">🎭 Scenario 3</div>
+          <p>Your manager asks you to raise an invoice for RM50,000 to a vendor for "consulting services rendered" — but you know no such services were provided. Your manager says it has been "approved from the top." What do you do?</p>
+          <div class="choices" id="sc2a">
+            <button class="choice-btn" onclick="scAnswer('2a','A','wrong')">A. Proceed — if the manager approved it, it's not your responsibility</button>
+            <button class="choice-btn" onclick="scAnswer('2a','B','correct')">B. Refuse and report it confidentially to the compliance officer or ethics hotline</button>
+            <button class="choice-btn" onclick="scAnswer('2a','C','wrong')">C. Raise the invoice but keep a personal copy just in case</button>
+          </div>
+          <div class="feedback correct" id="sc2a-correct">✅ <strong>Correct!</strong> Raising a false invoice is a criminal offence under Section 18 regardless of who approved it. "Following orders" is not a legal defence. Refuse, document what was asked of you, and report through the confidential ethics channel. You are protected as a whistleblower.</div>
+          <div class="feedback wrong" id="sc2a-wrong">❌ <strong>Incorrect.</strong> Processing a false invoice — even at a manager's instruction — makes you personally liable under Section 18. Senior approval is not a shield. Refuse and report it confidentially.</div>
         </div>
-        <div class="feedback correct" id="sc2-correct">✅ <strong>Correct!</strong> Raising a false invoice is a criminal offence under Section 18 of the MACC Act — regardless of who approved it. "Following orders" is not a legal defence. Refuse, document everything, and report through the confidential ethics channel. You are protected as a whistleblower.</div>
-        <div class="feedback wrong" id="sc2-wrong">❌ <strong>Incorrect.</strong> Participating in a false claim — even at a manager's request — makes you personally liable under Section 18 of MACC Act 2009. Senior approval does not protect you. You must refuse and report it confidentially. The law protects whistleblowers.</div>
+
+        <div class="scenario">
+          <div class="sc-lbl">🎭 Scenario 4</div>
+          <p>You are on the procurement committee. Your brother-in-law runs a company that submitted the lowest bid for a contract. You did not mention this to anyone. Is this a problem?</p>
+          <div class="choices" id="sc2b">
+            <button class="choice-btn" onclick="scAnswer('2b','A','wrong')">A. No — he submitted the lowest bid fairly so there is no issue</button>
+            <button class="choice-btn" onclick="scAnswer('2b','B','correct')">B. Yes — you must declare the conflict of interest and recuse yourself from the evaluation</button>
+            <button class="choice-btn" onclick="scAnswer('2b','C','wrong')">C. Only if you actually vote in his favour</button>
+          </div>
+          <div class="feedback correct" id="sc2b-correct">✅ <strong>Correct!</strong> Under Section 23 and SuperApp's conflict of interest policy, you must declare any personal relationship with a bidder — even if you intend to act fairly. Your undisclosed involvement in the evaluation is itself a violation. Declare and step aside immediately.</div>
+          <div class="feedback wrong" id="sc2b-wrong">❌ <strong>Incorrect.</strong> The conflict of interest exists the moment you know about the relationship — regardless of how you vote. Failing to declare it is a breach of Section 23 and Group policy. You must declare and recuse yourself from the process.</div>
+        </div>
+
+        <div class="page-footer">
+          <div style="font-size:12px;color:var(--muted);">Answer both scenarios to continue</div>
+          <button class="next-btn" id="next2-5" onclick="completeMod(2,3)">Complete Module 2 ✓</button>
+        </div>
       </div>
 
-      <button class="complete-btn" id="btn2" onclick="completeModule(2,3)">✓ Mark Complete &amp; Continue</button>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     MODULE 3 — FINES, PENALTIES & COMPANY POLICY
+<!-- ═══════════════════════════════════════════════════════
+     MODULE 3 — PENALTIES & POLICY (5 pages)
 ═══════════════════════════════════════════════════════ -->
 <div class="module" id="mod3">
-  <div class="module-header" onclick="toggleModule(3)">
-    <div class="module-num locked" id="num3">3</div>
-    <div class="module-title-wrap">
-      <div class="module-title">Penalties &amp; SuperApp Group ABC Policy</div>
-      <div class="module-subtitle">Fines, jail terms, GHE rules, facilitation payments, third parties</div>
+  <div class="mod-header" onclick="toggleMod(3)">
+    <div class="mod-num locked" id="num3">3</div>
+    <div class="mod-title-wrap">
+      <div class="mod-title">Penalties, Fines &amp; SuperApp ABC Policy</div>
+      <div class="mod-sub">5 topics · ~7 minutes</div>
     </div>
-    <span class="module-badge badge-locked" id="badge3">🔒 Locked</span>
+    <span class="mod-badge b-locked" id="badge3">🔒 Locked</span>
   </div>
-  <div class="module-body" id="body3">
-    <div class="locked-msg" id="locked3"><div class="lock-icon">🔒</div>Complete Module 2 to unlock.</div>
+  <div class="mod-body" id="body3">
+    <div class="locked-msg" id="locked3"><div class="li">🔒</div>Complete Module 2 to unlock.</div>
     <div id="content3" style="display:none">
 
-      <div class="section-divider">💸 Fines &amp; Penalties</div>
-
-      <div class="penalty-grid">
-        <div class="penalty-card">
-          <div class="ptitle">Individual Penalty</div>
-          <div class="psub">MACC Act 2009 — Ss. 16, 17, 18 &amp; 23</div>
-          <ul>
-            <li>Fine of at least 5× the bribe amount <em>or</em> RM10,000 — whichever is higher</li>
-            <li>Jail up to <strong>20 years</strong> per offence</li>
-          </ul>
+      <!-- PAGE 3.1 -->
+      <div class="page active" id="p3-1">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 3 · Topic 1 of 5</span></div>
+        <div class="slide">
+          <div class="slide-lbl">💸 Fines &amp; Penalties</div>
+          <h3>The Price of Corruption</h3>
+          <p>The MACC Act 2009 and its 2018 Amendment impose severe penalties on individuals and companies found guilty of corruption. These are not small administrative fines — they are designed to be punishing and life-altering.</p>
         </div>
-        <div class="penalty-card">
-          <div class="ptitle">Corporate Penalty</div>
-          <div class="psub">MACC Amendment Act 2018 — S. 17A</div>
-          <ul>
-            <li>Fine of at least 10× the bribe amount <em>or</em> RM1 million — whichever is higher</li>
-            <li>Jail up to <strong>20 years</strong> per offence</li>
-          </ul>
+        <div class="three-col">
+          <div class="info-card">
+            <div class="ic-title">⚖️ Individual Penalty</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:10px;">MACC Act 2009 — Ss. 16, 17, 18 &amp; 23</div>
+            <ul>
+              <li>Fine of at least <strong>5× the bribe amount</strong> or RM10,000 — whichever is higher</li>
+              <li>Jail sentence up to <strong>20 years</strong> per offence</li>
+              <li>Multiple charges can result in consecutive sentences</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="ic-title">🏢 Corporate Penalty</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:10px;">MACC Amendment Act 2018 — S. 17A</div>
+            <ul>
+              <li>Fine of at least <strong>10× the bribe amount</strong> or RM1 million — whichever is higher</li>
+              <li>Imprisonment up to <strong>20 years</strong></li>
+              <li>Company licence and contracts may be revoked</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="ic-title">🏷️ SuperApp Group</div>
+            <div style="font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:10px;">Internal Group Policy</div>
+            <ul>
+              <li>Immediate <strong>dismissal</strong> without notice</li>
+              <li>Permanently barred from employment within the Group</li>
+              <li>Reported to MACC and relevant authorities</li>
+              <li>Civil recovery action may be initiated</li>
+            </ul>
+          </div>
         </div>
-        <div class="penalty-card">
-          <div class="ptitle">SuperApp Consequence</div>
-          <div class="psub">Group Policy</div>
-          <ul>
-            <li>Immediate <strong>dismissal</strong></li>
-            <li>Barred from future employment in the Group</li>
-            <li>Reported to MACC and relevant authorities</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="section-divider">📋 What Our ABC Policy Covers</div>
-
-      <div class="policy-grid">
-        <div class="policy-card">
-          <h4>Gifts, Hospitality &amp; Entertainment (GHE)</h4>
-          <div class="yes-tag">CONDITIONAL</div>
-          <ul>
-            <li>GHE should never be requested or provided to influence a decision</li>
-            <li>Staff and Directors may accept "appropriate" gifts to maintain good relationships</li>
-            <li>Must be declared in the Gift Register</li>
-          </ul>
-        </div>
-        <div class="policy-card">
-          <h4>Facilitation Payments</h4>
-          <div class="no-tag">STRICTLY NO</div>
-          <ul>
-            <li>Defined as small bribes to speed up a business decision, shipment, or transaction</li>
-            <li>Strictly prohibited under Group policy — no exceptions</li>
-            <li>Report any requests immediately</li>
-          </ul>
-        </div>
-        <div class="policy-card">
-          <h4>Donation, Sponsorship &amp; Charity</h4>
-          <div class="yes-tag">WITH APPROVAL</div>
-          <ul>
-            <li>Must seek approval and fill in the Declaration Form (Appendix 1)</li>
-            <li>Strictly not to gain or retain any business</li>
-            <li>Purpose must be declared and documented</li>
-          </ul>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer3-1">⏱ <span id="tspan3-1">75s</span></div>
+          <button class="next-btn" id="next3-1" onclick="nextPage(3,2)">Next Topic →</button>
         </div>
       </div>
 
-      <div class="slide">
-        <div class="slide-label">🤝 Engaging with Third Parties</div>
-        <h3>Your Responsibilities With Vendors &amp; Partners</h3>
-        <p>The Group can be held liable for bribery and corruption committed by third parties acting on its behalf. Every employee has a duty to:</p>
-        <ul class="slide-points">
-          <li>Conduct <strong>due diligence</strong> on all external parties the Group contracts with or hires</li>
-          <li>Ensure all payments made to third parties are for <strong>proper and legitimate reimbursements</strong></li>
-          <li>The Group will <strong>not enter or continue</strong> a relationship with any third party who cannot comply with Group policy</li>
-          <li>If a third party raises red flags, <strong>escalate immediately</strong> to the Risk &amp; Compliance Department</li>
-        </ul>
-      </div>
-
-      <div class="scenario">
-        <div class="scenario-label">🎭 Scenario — What would you do?</div>
-        <p>Your team is onboarding a new logistics vendor. During due diligence, you discover the vendor has no registered business address, issues vague invoices with no description of services, and the director is the spouse of a government official who approves your company's operating licences. What do you do?</p>
-        <div class="choices" id="sc3">
-          <button class="choice-btn" onclick="answer(3,'A','wrong')">A. Proceed — the price is competitive and we need a vendor urgently</button>
-          <button class="choice-btn" onclick="answer(3,'B','wrong')">B. Ask the vendor to update their invoice format and proceed</button>
-          <button class="choice-btn" onclick="answer(3,'C','correct')">C. Flag the red flags to the Risk &amp; Compliance Department immediately and do not proceed until cleared</button>
+      <!-- PAGE 3.2 -->
+      <div class="page" id="p3-2">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 3 · Topic 2 of 5</span></div>
+        <div class="slide">
+          <div class="slide-lbl">🎁 Policy — Gifts, Hospitality &amp; Entertainment</div>
+          <h3>The GHE Rules</h3>
+          <p>Gifts, Hospitality and Entertainment (GHE) are areas where corruption risk is highest because they can be used to subtly influence business decisions. SuperApp Group's policy is clear:</p>
+          <ul class="pts">
+            <li>GHE should <strong>never be solicited</strong> from a business partner, vendor, or government official</li>
+            <li>GHE should <strong>never be offered</strong> with the intent to influence a business decision</li>
+            <li>Staff and Directors <strong>may accept appropriate gifts</strong> where it is to maintain a genuine business relationship — but this is conditional</li>
+            <li>All gifts received must be <strong>declared in the Gift Register</strong> regardless of value</li>
+            <li>Gifts of significant value must be <strong>returned or surrendered</strong> to the company</li>
+            <li>GHE from government officials or entities should be <strong>declined in all circumstances</strong></li>
+          </ul>
         </div>
-        <div class="feedback correct" id="sc3-correct">✅ <strong>Correct!</strong> Multiple red flags here — vague invoicing, no registered address, and a conflict of interest with a government official. Under Group policy, you must not proceed with a third party who raises compliance concerns. Escalate to Risk &amp; Compliance for a full assessment. Urgency is never a reason to bypass due diligence.</div>
-        <div class="feedback wrong" id="sc3-wrong">❌ <strong>Incorrect.</strong> These are serious red flags that must be escalated — not worked around. The Group can be held liable under MACC Section 17A for corruption committed through third parties. Proceeding without clearance puts you and the company at serious legal risk.</div>
+        <div class="slide">
+          <div class="slide-lbl">⚠️ Red Flags in GHE</div>
+          <h3>When a "Gift" Is Actually a Bribe</h3>
+          <p>Ask yourself these questions before accepting any GHE:</p>
+          <ul class="pts">
+            <li>Is this timed around a business decision, tender, or contract renewal?</li>
+            <li>Would I be comfortable if my manager or the compliance team knew about this?</li>
+            <li>Is the value excessive or unusual for normal business practice?</li>
+            <li>Is it being given secretly or with an expectation of something in return?</li>
+          </ul>
+          <p style="margin-top:14px;">If the answer to any of these is <strong>"yes"</strong> — decline, declare, and report.</p>
+        </div>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer3-2">⏱ <span id="tspan3-2">60s</span></div>
+          <button class="next-btn" id="next3-2" onclick="nextPage(3,3)">Next Topic →</button>
+        </div>
       </div>
 
-      <button class="complete-btn" id="btn3" onclick="completeModule(3,4)">✓ Mark Complete &amp; Continue</button>
+      <!-- PAGE 3.3 -->
+      <div class="page" id="p3-3">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 3 · Topic 3 of 5</span></div>
+        <div class="three-col">
+          <div class="info-card">
+            <div class="ic-title">🚫 Facilitation Payments</div>
+            <div class="no-tag">STRICTLY PROHIBITED</div>
+            <ul>
+              <li>Defined as small, unofficial payments made to speed up a routine government process — e.g. licence approvals, customs clearance, permit processing</li>
+              <li>Sometimes called "grease payments" or "speed money"</li>
+              <li><strong>Strictly prohibited</strong> under Group policy — no exceptions, no matter the country</li>
+              <li>If requested, refuse politely, document the request, and report to Risk &amp; Compliance immediately</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="ic-title">💰 Donations &amp; Sponsorships</div>
+            <div class="yes-tag">WITH PRIOR APPROVAL</div>
+            <ul>
+              <li>All corporate donations, sponsorships, and charitable contributions must be approved in advance</li>
+              <li>Fill in <strong>Appendix 1 — Declaration Form</strong> before committing to any contribution</li>
+              <li>Must not be used to gain, retain, or influence any business relationship</li>
+              <li>Must declare the purpose clearly and ensure the recipient is a legitimate organisation</li>
+              <li>No public official should be affiliated with or benefit from the contribution</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <div class="ic-title">🤝 Political Contributions</div>
+            <div class="no-tag">NOT PERMITTED</div>
+            <ul>
+              <li>SuperApp Group does not make political donations or contributions to political parties or campaigns</li>
+              <li>Employees must not make political donations on behalf of the Group</li>
+              <li>Personal political donations by employees are their own affair but must not involve Group resources</li>
+            </ul>
+          </div>
+        </div>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer3-3">⏱ <span id="tspan3-3">60s</span></div>
+          <button class="next-btn" id="next3-3" onclick="nextPage(3,4)">Next Topic →</button>
+        </div>
+      </div>
+
+      <!-- PAGE 3.4 -->
+      <div class="page" id="p3-4">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 3 · Topic 4 of 5</span></div>
+        <div class="slide">
+          <div class="slide-lbl">🤝 Third-Party Due Diligence</div>
+          <h3>Your Responsibilities When Engaging External Parties</h3>
+          <p>Under Section 17A, SuperApp Group can be held criminally liable for bribery committed by third parties — including vendors, agents, consultants, joint venture partners, and distributors — acting on its behalf. This means every employee who engages third parties has a compliance responsibility.</p>
+          <ul class="pts">
+            <li>Conduct proper <strong>due diligence</strong> on all third parties before engaging them — check their registration, reputation, and ownership</li>
+            <li>Watch for <strong>red flags</strong>: no registered address, vague scope of services, unusually high commissions, ownership linked to government officials</li>
+            <li>Ensure all payments to third parties are <strong>properly documented</strong>, match agreed services, and go through official channels</li>
+            <li>The Group will <strong>not enter or continue</strong> a relationship with any third party who cannot comply with Group policy</li>
+            <li>If you discover a third party has engaged in corrupt conduct, <strong>escalate immediately</strong> to Risk &amp; Compliance — do not attempt to resolve it yourself</li>
+            <li>All third-party contracts must include <strong>anti-bribery representations and warranties</strong></li>
+          </ul>
+        </div>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer3-4">⏱ <span id="tspan3-4">75s</span></div>
+          <button class="next-btn" id="next3-4" onclick="nextPage(3,5)">Next Topic →</button>
+        </div>
+      </div>
+
+      <!-- PAGE 3.5 — SCENARIOS -->
+      <div class="page" id="p3-5">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 3 · Topic 5 of 5 — Scenarios</span></div>
+
+        <div class="scenario">
+          <div class="sc-lbl">🎭 Scenario 5</div>
+          <p>Your logistics vendor asks you to pay an additional RM2,000 to a port official "to make sure our shipment clears customs by Friday." They say this is normal practice. What do you do?</p>
+          <div class="choices" id="sc3a">
+            <button class="choice-btn" onclick="scAnswer('3a','A','wrong')">A. Approve it — small amounts to speed up processes are acceptable</button>
+            <button class="choice-btn" onclick="scAnswer('3a','B','correct')">B. Refuse and report the request to Risk &amp; Compliance immediately</button>
+            <button class="choice-btn" onclick="scAnswer('3a','C','wrong')">C. Pay it but record it as a "port handling fee" on the invoice</button>
+          </div>
+          <div class="feedback correct" id="sc3a-correct">✅ <strong>Correct!</strong> This is a classic facilitation payment — strictly prohibited under Group policy with no exceptions. "Normal practice" is not a defence. Refuse, document the request, and report it to Risk &amp; Compliance. The company will find a legitimate way to clear the shipment.</div>
+          <div class="feedback wrong" id="sc3a-wrong">❌ <strong>Incorrect.</strong> Facilitation payments are illegal under the MACC Act regardless of amount or how common they may seem. Relabelling it on an invoice doesn't make it legal — it adds a false claim offence on top. Refuse and report it.</div>
+        </div>
+
+        <div class="scenario">
+          <div class="sc-lbl">🎭 Scenario 6</div>
+          <p>During vendor due diligence, you discover the proposed consultant is a company owned by the spouse of a senior government official who oversees regulatory approvals in your industry. The consultant's fees are 3× the market rate. What do you do?</p>
+          <div class="choices" id="sc3b">
+            <button class="choice-btn" onclick="scAnswer('3b','A','wrong')">A. Proceed — the consultant may still provide legitimate value</button>
+            <button class="choice-btn" onclick="scAnswer('3b','B','correct')">B. Flag both red flags to Risk &amp; Compliance and halt the engagement until cleared</button>
+            <button class="choice-btn" onclick="scAnswer('3b','C','wrong')">C. Negotiate the fees down and proceed if they agree</button>
+          </div>
+          <div class="feedback correct" id="sc3b-correct">✅ <strong>Correct!</strong> Two major red flags: a link to a government official in a position of influence, and fees far above market rate (a common way to disguise bribe payments as legitimate consulting fees). Halt the engagement and escalate immediately. The Group cannot proceed until Risk &amp; Compliance has cleared this.</div>
+          <div class="feedback wrong" id="sc3b-wrong">❌ <strong>Incorrect.</strong> Inflated fees paid to a company linked to a regulator is one of the most common forms of disguised bribery. Proceeding — even at negotiated rates — exposes the Group to Section 17A corporate liability. Escalate immediately.</div>
+        </div>
+
+        <div class="page-footer">
+          <div style="font-size:12px;color:var(--muted);">Answer both scenarios to continue</div>
+          <button class="next-btn" id="next3-5" onclick="completeMod(3,4)">Complete Module 3 ✓</button>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════════════════
-     MODULE 4 — REPORTING & USEFUL LINKS
+<!-- ═══════════════════════════════════════════════════════
+     MODULE 4 — REPORTING & RESOURCES (3 pages)
 ═══════════════════════════════════════════════════════ -->
 <div class="module" id="mod4">
-  <div class="module-header" onclick="toggleModule(4)">
-    <div class="module-num locked" id="num4">4</div>
-    <div class="module-title-wrap">
-      <div class="module-title">Speak Up — Reporting &amp; Useful Resources</div>
-      <div class="module-subtitle">How to report, whistleblower protection, key links</div>
+  <div class="mod-header" onclick="toggleMod(4)">
+    <div class="mod-num locked" id="num4">4</div>
+    <div class="mod-title-wrap">
+      <div class="mod-title">Speak Up — Reporting &amp; Resources</div>
+      <div class="mod-sub">3 topics · ~4 minutes</div>
     </div>
-    <span class="module-badge badge-locked" id="badge4">🔒 Locked</span>
+    <span class="mod-badge b-locked" id="badge4">🔒 Locked</span>
   </div>
-  <div class="module-body" id="body4">
-    <div class="locked-msg" id="locked4"><div class="lock-icon">🔒</div>Complete Module 3 to unlock.</div>
+  <div class="mod-body" id="body4">
+    <div class="locked-msg" id="locked4"><div class="li">🔒</div>Complete Module 3 to unlock.</div>
     <div id="content4" style="display:none">
 
-      <div class="slide">
-        <div class="slide-label">📣 Your Duty to Speak Up</div>
-        <h3>Silence Makes You Complicit</h3>
-        <p>Every employee — regardless of seniority — has a personal obligation to report suspected bribery or corruption. You are legally protected when you report in good faith.</p>
-        <ul class="slide-points">
-          <li>Report to your <strong>direct manager or HR</strong> if you feel safe doing so</li>
-          <li>Use the <strong>anonymous Ethics Hotline</strong> if you prefer confidentiality</li>
-          <li>Email the <strong>Compliance Officer</strong> directly via People Connect</li>
-          <li><strong>Document everything</strong> — dates, names, what was said or offered</li>
-          <li><strong>Do not investigate alone</strong> — hand it to the compliance team</li>
-          <li>Retaliation against whistleblowers is a <strong>serious disciplinary offence</strong></li>
-        </ul>
-      </div>
-
-      <div class="slide">
-        <div class="slide-label">📋 Reference Resources</div>
-        <h3>Useful Links &amp; Documents</h3>
-        <p>Bookmark these official resources for reference:</p>
-      </div>
-
-      <div class="links-grid">
-        <div class="link-card"><a href="https://www.sprm.gov.my" target="_blank">MACC Official Website (SPRM)</a></div>
-        <div class="link-card"><a href="https://www.sprm.gov.my/admin/files/sprm/assets/pdf/penguatkuasaan/act-694-bi.pdf" target="_blank">MACC Act 2009</a></div>
-        <div class="link-card"><a href="https://sites.google.com/revenuemonster.my/people-connect/asset-library/risk-compliance" target="_blank">SuperApp ABC Policy (People Connect)</a></div>
-        <div class="link-card"><a href="https://www.sprm.gov.my/admin/files/sprm/assets/pdf/penguatkuasaan/akta-A1567-bi.pdf" target="_blank">MACC Amendment Act 2018</a></div>
-        <div class="link-card"><a href="https://sites.google.com/revenuemonster.my/people-connect/Home-" target="_blank">People Connect (HR Portal)</a></div>
-      </div>
-
-      <div class="scenario">
-        <div class="scenario-label">🎭 Final Assessment — What would you do?</div>
-        <p>A colleague confides in you that they gave a government officer RM500 "under the table" to speed up a licence approval last month. They ask you to keep it secret. What is your obligation?</p>
-        <div class="choices" id="sc4">
-          <button class="choice-btn" onclick="answer(4,'A','wrong')">A. Keep the secret — it's already done and reporting won't change anything</button>
-          <button class="choice-btn" onclick="answer(4,'B','wrong')">B. Advise your colleague to come clean themselves, but take no further action</button>
-          <button class="choice-btn" onclick="answer(4,'C','correct')">C. Report it confidentially to the compliance officer or ethics hotline — you have a duty to report</button>
+      <!-- PAGE 4.1 -->
+      <div class="page active" id="p4-1">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 4 · Topic 1 of 3</span></div>
+        <div class="slide">
+          <div class="slide-lbl">📣 Speak Up</div>
+          <h3>Your Duty to Report — Silence Makes You Complicit</h3>
+          <p>Every employee — regardless of seniority, department, or length of service — has a personal obligation to report suspected bribery or corruption. Staying silent when you know or suspect corruption is happening is not neutral — it makes you part of the problem, and potentially makes you legally liable.</p>
+          <p>You are legally protected under the <strong>Whistleblower Protection Act 2010</strong> when you report in good faith. This means the company cannot take any adverse action against you — including termination, demotion, harassment, or exclusion — for making a genuine report.</p>
+          <ul class="pts">
+            <li>Report to your <strong>direct manager or Head of Department</strong> if you feel safe doing so</li>
+            <li>Use the <strong>anonymous Ethics Hotline</strong> if you prefer confidentiality — your identity will not be revealed</li>
+            <li>Email or approach the <strong>Compliance Officer</strong> directly via People Connect</li>
+            <li><strong>Document everything</strong> before reporting — dates, times, names, what was said, what was offered, amounts involved</li>
+            <li><strong>Do not investigate alone</strong> — do not confront the person suspected, do not try to gather evidence yourself. Hand it to the compliance team.</li>
+            <li>Retaliation against anyone who makes a genuine report is a <strong>serious disciplinary offence</strong> that will result in dismissal</li>
+          </ul>
         </div>
-        <div class="feedback correct" id="sc4-correct">✅ <strong>Excellent!</strong> You have a duty to report known or suspected corruption — even when it involves a colleague or has already happened. This is a facilitation payment under MACC Section 16/17A. Report it through the confidential channel. You are legally protected for reporting in good faith. The Group's whistleblower policy ensures you will not face retaliation.</div>
-        <div class="feedback wrong" id="sc4-wrong">❌ <strong>Incorrect.</strong> Staying silent about a known corrupt act can make you an accessory. Both facilitation payments (Section 16/17A) and covering them up can attract criminal liability. You must report it confidentially. The ethics hotline protects your identity and you cannot be penalised for reporting in good faith.</div>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer4-1">⏱ <span id="tspan4-1">75s</span></div>
+          <button class="next-btn" id="next4-1" onclick="nextPage(4,2)">Next Topic →</button>
+        </div>
       </div>
 
-      <button class="complete-btn" id="btn4" onclick="completeModule(4, null)">🏅 Complete Training &amp; Claim Certificate</button>
+      <!-- PAGE 4.2 -->
+      <div class="page" id="p4-2">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 4 · Topic 2 of 3</span></div>
+        <div class="slide">
+          <div class="slide-lbl">📋 Useful Links</div>
+          <h3>Reference Resources</h3>
+          <p>Bookmark these official resources for ongoing reference:</p>
+        </div>
+        <div class="lgrid">
+          <div class="lcard"><a href="https://www.sprm.gov.my" target="_blank">MACC Official Website (SPRM)</a></div>
+          <div class="lcard"><a href="https://www.sprm.gov.my/admin/files/sprm/assets/pdf/penguatkuasaan/act-694-bi.pdf" target="_blank">MACC Act 2009 (Full Text)</a></div>
+          <div class="lcard"><a href="https://www.sprm.gov.my/admin/files/sprm/assets/pdf/penguatkuasaan/akta-A1567-bi.pdf" target="_blank">MACC Amendment Act 2018</a></div>
+          <div class="lcard"><a href="https://sites.google.com/revenuemonster.my/people-connect/asset-library/risk-compliance" target="_blank">SuperApp ABC Policy (People Connect)</a></div>
+          <div class="lcard"><a href="https://sites.google.com/revenuemonster.my/people-connect/Home-" target="_blank">People Connect — HR Portal</a></div>
+          <div class="lcard"><a href="https://www.sprm.gov.my/macc/images/pelan/NACP_2019-2023.pdf" target="_blank">National Anti-Corruption Plan</a></div>
+        </div>
+        <div class="page-footer">
+          <div class="timer-pill" id="timer4-2">⏱ <span id="tspan4-2">60s</span></div>
+          <button class="next-btn" id="next4-2" onclick="nextPage(4,3)">Next Topic →</button>
+        </div>
+      </div>
+
+      <!-- PAGE 4.3 — SCENARIOS -->
+      <div class="page" id="p4-3">
+        <div class="page-hdr"><span class="page-breadcrumb">Module 4 · Topic 3 of 3 — Scenarios</span></div>
+
+        <div class="scenario">
+          <div class="sc-lbl">🎭 Scenario 7</div>
+          <p>A colleague confides that they paid RM500 to a government officer "under the table" to speed up a licence approval last month. They beg you to keep it secret. What is your obligation?</p>
+          <div class="choices" id="sc4a">
+            <button class="choice-btn" onclick="scAnswer('4a','A','wrong')">A. Keep the secret — it's already done and reporting won't change anything</button>
+            <button class="choice-btn" onclick="scAnswer('4a','B','correct')">B. Report it confidentially — you have a duty to report even past incidents</button>
+            <button class="choice-btn" onclick="scAnswer('4a','C','wrong')">C. Advise your colleague to self-report, but take no action yourself</button>
+          </div>
+          <div class="feedback correct" id="sc4a-correct">✅ <strong>Correct!</strong> You have a duty to report known corruption even when it is in the past and even when it involves someone you like. A facilitation payment is an offence under Sections 16 and 17A. You are legally protected for reporting in good faith — and potentially liable for not reporting.</div>
+          <div class="feedback wrong" id="sc4a-wrong">❌ <strong>Incorrect.</strong> Staying silent about a known corrupt act can make you an accessory after the fact. You must report it through the confidential channel. The ethics hotline protects your identity.</div>
+        </div>
+
+        <div class="scenario">
+          <div class="sc-lbl">🎭 Scenario 8</div>
+          <p>You reported a suspected fraud to your manager two weeks ago. Since then, your manager has been cold towards you, excluded you from meetings, and reassigned some of your key accounts. What should you do?</p>
+          <div class="choices" id="sc4b">
+            <button class="choice-btn" onclick="scAnswer('4b','A','wrong')">A. Do nothing — maybe it's a coincidence and things will improve</button>
+            <button class="choice-btn" onclick="scAnswer('4b','B','correct')">B. Report the retaliation to HR or the Compliance Officer immediately</button>
+            <button class="choice-btn" onclick="scAnswer('4b','C','wrong')">C. Withdraw your original report to restore the working relationship</button>
+          </div>
+          <div class="feedback correct" id="sc4b-correct">✅ <strong>Correct!</strong> What you are experiencing is retaliation against a whistleblower — a serious disciplinary and potentially criminal offence. Report it immediately to HR or the Compliance Officer. You are protected under both the Whistleblower Protection Act 2010 and Group policy. Do not withdraw your original report.</div>
+          <div class="feedback wrong" id="sc4b-wrong">❌ <strong>Incorrect.</strong> Retaliation against a whistleblower is a serious offence. Withdrawing your report would also undermine the investigation. Report the retaliation separately to HR or the Compliance Officer immediately. You are legally protected.</div>
+        </div>
+
+        <div class="page-footer">
+          <div style="font-size:12px;color:var(--muted);">Answer both scenarios to continue</div>
+          <button class="next-btn" id="next4-3" onclick="completeMod(4,'quiz')">Complete Module 4 ✓</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     FINAL QUIZ
+═══════════════════════════════════════════════════════ -->
+<div class="module" id="modQuiz">
+  <div class="mod-header" onclick="toggleMod('Quiz')">
+    <div class="mod-num locked" id="numQuiz">🎓</div>
+    <div class="mod-title-wrap">
+      <div class="mod-title">Final Assessment Quiz</div>
+      <div class="mod-sub">8 questions · Minimum 70% to pass · ~3 minutes</div>
+    </div>
+    <span class="mod-badge b-locked" id="badgeQuiz">🔒 Locked</span>
+  </div>
+  <div class="mod-body" id="bodyQuiz">
+    <div class="locked-msg" id="lockedQuiz"><div class="li">🔒</div>Complete all 4 modules to unlock the final quiz.</div>
+    <div id="contentQuiz" style="display:none">
+      <div class="quiz-wrap">
+        <div class="quiz-header">
+          <h2>Final Assessment</h2>
+          <p>Answer all 8 questions. You need <strong>6 out of 8 (70%)</strong> to pass and claim your certificate.<br>Read each question carefully before answering.</p>
+        </div>
+
+        <div class="quiz-q" id="qq1">
+          <div class="qnum">Question 1 of 8</div>
+          <div class="qtext">MACC was established under which legislation?</div>
+          <div class="quiz-opts">
+            <button class="quiz-opt" onclick="qAnswer(1,'A','wrong')">A. Anti-Corruption Agency Act 1997</button>
+            <button class="quiz-opt" onclick="qAnswer(1,'B','correct')">B. Malaysian Anti-Corruption Commission Act 2009</button>
+            <button class="quiz-opt" onclick="qAnswer(1,'C','wrong')">C. Whistleblower Protection Act 2010</button>
+            <button class="quiz-opt" onclick="qAnswer(1,'D','wrong')">D. Penal Code (Amendment) Act 2018</button>
+          </div>
+          <div class="quiz-feedback" id="qf1"></div>
+        </div>
+
+        <div class="quiz-q" id="qq2">
+          <div class="qnum">Question 2 of 8</div>
+          <div class="qtext">Under the MACC Act 2009, which section covers FALSE CLAIMS (submitting fraudulent invoices or documents)?</div>
+          <div class="quiz-opts">
+            <button class="quiz-opt" onclick="qAnswer(2,'A','wrong')">A. Section 16</button>
+            <button class="quiz-opt" onclick="qAnswer(2,'B','wrong')">B. Section 17A</button>
+            <button class="quiz-opt" onclick="qAnswer(2,'C','correct')">C. Section 18</button>
+            <button class="quiz-opt" onclick="qAnswer(2,'D','wrong')">D. Section 23</button>
+          </div>
+          <div class="quiz-feedback" id="qf2"></div>
+        </div>
+
+        <div class="quiz-q" id="qq3">
+          <div class="qnum">Question 3 of 8</div>
+          <div class="qtext">What is the maximum jail sentence an INDIVIDUAL can receive per offence under the MACC Act 2009?</div>
+          <div class="quiz-opts">
+            <button class="quiz-opt" onclick="qAnswer(3,'A','wrong')">A. 5 years</button>
+            <button class="quiz-opt" onclick="qAnswer(3,'B','wrong')">B. 10 years</button>
+            <button class="quiz-opt" onclick="qAnswer(3,'C','wrong')">C. 15 years</button>
+            <button class="quiz-opt" onclick="qAnswer(3,'D','correct')">D. 20 years</button>
+          </div>
+          <div class="quiz-feedback" id="qf3"></div>
+        </div>
+
+        <div class="quiz-q" id="qq4">
+          <div class="qnum">Question 4 of 8</div>
+          <div class="qtext">A "facilitation payment" is best described as:</div>
+          <div class="quiz-opts">
+            <button class="quiz-opt" onclick="qAnswer(4,'A','wrong')">A. A legitimate payment to speed up internal processes</button>
+            <button class="quiz-opt" onclick="qAnswer(4,'B','correct')">B. An unofficial payment to a government official to expedite a routine process</button>
+            <button class="quiz-opt" onclick="qAnswer(4,'C','wrong')">C. A vendor discount offered for prompt payment</button>
+            <button class="quiz-opt" onclick="qAnswer(4,'D','wrong')">D. A processing fee charged by a bank</button>
+          </div>
+          <div class="quiz-feedback" id="qf4"></div>
+        </div>
+
+        <div class="quiz-q" id="qq5">
+          <div class="qnum">Question 5 of 8</div>
+          <div class="qtext">Under SuperApp Group's ABC Policy, what must you do if you receive a gift from a business partner?</div>
+          <div class="quiz-opts">
+            <button class="quiz-opt" onclick="qAnswer(5,'A','wrong')">A. Accept it if the value is below RM500</button>
+            <button class="quiz-opt" onclick="qAnswer(5,'B','wrong')">B. Return it immediately without telling anyone</button>
+            <button class="quiz-opt" onclick="qAnswer(5,'C','correct')">C. Declare it in the Gift Register regardless of value</button>
+            <button class="quiz-opt" onclick="qAnswer(5,'D','wrong')">D. Accept it only during festive seasons</button>
+          </div>
+          <div class="quiz-feedback" id="qf5"></div>
+        </div>
+
+        <div class="quiz-q" id="qq6">
+          <div class="qnum">Question 6 of 8</div>
+          <div class="qtext">Which section of the MACC Act 2009 makes a COMPANY criminally liable for corruption committed by its employees or agents?</div>
+          <div class="quiz-opts">
+            <button class="quiz-opt" onclick="qAnswer(6,'A','wrong')">A. Section 16</button>
+            <button class="quiz-opt" onclick="qAnswer(6,'B','correct')">B. Section 17A (2018 Amendment)</button>
+            <button class="quiz-opt" onclick="qAnswer(6,'C','wrong')">C. Section 18</button>
+            <button class="quiz-opt" onclick="qAnswer(6,'D','wrong')">D. Section 23</button>
+          </div>
+          <div class="quiz-feedback" id="qf6"></div>
+        </div>
+
+        <div class="quiz-q" id="qq7">
+          <div class="qnum">Question 7 of 8</div>
+          <div class="qtext">You discover a vendor your team is about to engage is owned by a government regulator's family member, and their fees are double the market rate. What should you do?</div>
+          <div class="quiz-opts">
+            <button class="quiz-opt" onclick="qAnswer(7,'A','wrong')">A. Proceed — they may still provide legitimate services</button>
+            <button class="quiz-opt" onclick="qAnswer(7,'B','wrong')">B. Negotiate the fees down and proceed</button>
+            <button class="quiz-opt" onclick="qAnswer(7,'C','correct')">C. Halt the engagement and escalate to Risk &amp; Compliance immediately</button>
+            <button class="quiz-opt" onclick="qAnswer(7,'D','wrong')">D. Ask the vendor to change their ownership structure first</button>
+          </div>
+          <div class="quiz-feedback" id="qf7"></div>
+        </div>
+
+        <div class="quiz-q" id="qq8">
+          <div class="qnum">Question 8 of 8</div>
+          <div class="qtext">After reporting suspected corruption, your manager begins excluding you from meetings and reassigning your accounts. What is the correct response?</div>
+          <div class="quiz-opts">
+            <button class="quiz-opt" onclick="qAnswer(8,'A','wrong')">A. Withdraw your report to restore the working relationship</button>
+            <button class="quiz-opt" onclick="qAnswer(8,'B','correct')">B. Report the retaliation to HR or the Compliance Officer immediately</button>
+            <button class="quiz-opt" onclick="qAnswer(8,'C','wrong')">C. Wait to see if things improve before taking any action</button>
+            <button class="quiz-opt" onclick="qAnswer(8,'D','wrong')">D. Confront your manager directly about their behaviour</button>
+          </div>
+          <div class="quiz-feedback" id="qf8"></div>
+        </div>
+
+        <button class="quiz-submit" id="quizSubmit" onclick="submitQuiz()">Submit Quiz →</button>
+
+        <!-- RESULT -->
+        <div class="quiz-result" id="quizResult">
+          <div class="qr-icon" id="qrIcon"></div>
+          <div class="qr-score" id="qrScore"></div>
+          <div class="qr-msg" id="qrMsg"></div>
+          <div id="qrBtns"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -622,151 +969,298 @@
   <div class="cert-inner">
     <div class="cert-medal">🏅</div>
     <h2>Training Completed</h2>
-    <p>This certifies that you have successfully completed the<br>
-    <strong>Anti-Bribery &amp; Corruption Training </strong><br>
-    for SuperApp Group — conducted by the Risk and Compliance Department.</p>
+    <p>This certifies that you have successfully completed the<br><strong>Anti-Bribery &amp; Corruption Training</strong><br>for SuperApp Group — conducted by the Risk and Compliance Department.</p>
     <div class="cert-date" id="certDate"></div>
   </div>
 </div>
 
-<!-- SIGN-OFF CARD -->
-<div class="signoff-card" id="signoffCard" style="display:none">
+<!-- SIGNOFF -->
+<div class="signoff" id="signoffCard" style="display:none">
   <div class="signoff-inner">
     <div class="signoff-icon">📋</div>
     <h3>One Last Step — Official Sign-Off Required</h3>
     <p>Your completion will only be <strong>recorded by HR</strong> after you submit the sign-off form below. This is mandatory for all employees.</p>
     <p class="signoff-note">⏱ Takes less than 1 minute. Your name, department, and timestamp will be saved automatically.</p>
-    <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="signoff-btn" id="signoffBtn">
-      Complete My Official Sign-Off →
-    </a>
-    <p class="signoff-small">After submitting the form, your training record will be sent to the Risk &amp; Compliance Department.</p>
+    <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="signoff-btn">Complete My Official Sign-Off →</a>
+    <p class="signoff-small">After submitting, your training record will be sent to the Risk &amp; Compliance Department.</p>
   </div>
 </div>
 
 </div><!-- /container -->
 
 <script>
-let completed = {1:false,2:false,3:false,4:false};
-let scenarioAnswered = {1:false,2:false,3:false,4:false};
-let videoWatched = false;
-let videoInterval = null;
-let videoSeconds = 0;
-const VIDEO_DURATION = 30; // ← change to your video's actual length in seconds
+// ─── STATE ──────────────────────────────────────────────────
+const modCompleted = {1:false,2:false,3:false,4:false,Quiz:false};
+const scAnswered = {};   // tracks scenario answers
+const qAnswers = {};     // tracks quiz answers {qNum: 'correct'|'wrong'}
+let quizAllAnswered = false;
 
-function toggleModule(n) {
-  const body = document.getElementById('body'+n);
-  if (body.classList.contains('open')) {
-    body.classList.remove('open');
-    body.style.display = 'none';
-  } else {
-    body.classList.add('open');
-    body.style.display = 'block';
+// Page timers: {pageId: seconds}
+const PAGE_TIMERS = {
+  'p1-1':90,'p1-2':90,'p1-3':75,'p1-4':0,
+  'p2-1':90,'p2-2':90,'p2-3':90,'p2-4':75,'p2-5':0,
+  'p3-1':75,'p3-2':90,'p3-3':90,'p3-4':75,'p3-5':0,
+  'p4-1':75,'p4-2':60,'p4-3':0
+};
+
+// Scenario pages that need all scenarios answered before Next unlocks
+const SCENARIO_PAGES = {
+  'p1-4': ['1a','1b'],
+  'p2-5': ['2a','2b'],
+  'p3-5': ['3a','3b'],
+  'p4-3': ['4a','4b']
+};
+
+let activeTimers = {};
+
+// ─── TIMER ──────────────────────────────────────────────────
+function startPageTimer(pageId) {
+  const secs = PAGE_TIMERS[pageId];
+  if (!secs) {
+    // No timer — check if scenario page
+    checkPageReady(pageId);
+    return;
   }
-}
+  const modN = pageId.split('-')[0].replace('p','');
+  const timerEl = document.getElementById('timer'+modN+'-'+pageId.split('-')[1]);
+  const spanEl = document.getElementById('tspan'+modN+'-'+pageId.split('-')[1]);
+  if (!timerEl || !spanEl) return;
 
-function answer(sc, choice, result) {
-  if (scenarioAnswered[sc]) return;
-  scenarioAnswered[sc] = true;
-  const btns = document.querySelectorAll('#sc'+sc+' .choice-btn');
-  btns.forEach(b => { b.disabled = true; });
-  const idx = ['A','B','C'].indexOf(choice);
-  btns[idx].classList.add(result);
-  if (result === 'correct') {
-    document.getElementById('sc'+sc+'-correct').style.display = 'block';
-  } else {
-    document.getElementById('sc'+sc+'-wrong').style.display = 'block';
-    // highlight correct answer
-    const correctIdx = {1:1, 2:1, 3:2, 4:2};
-    btns[correctIdx[sc]].classList.add('correct');
-  }
-  checkReady(sc);
-}
-
-function checkReady(mod) {
-  const btn = document.getElementById('btn'+mod);
-  if (!btn) return;
-  if (mod === 2) {
-    if (scenarioAnswered[2] && videoWatched) btn.classList.add('ready');
-  } else {
-    if (scenarioAnswered[mod]) btn.classList.add('ready');
-  }
-}
-
-function completeModule(current, next) {
-  completed[current] = true;
-  const num = document.getElementById('num'+current);
-  num.classList.remove('locked');
-  num.classList.add('done');
-  num.textContent = '✓';
-  const badge = document.getElementById('badge'+current);
-  badge.className = 'module-badge badge-done';
-  badge.textContent = '✓ Done';
-  const body = document.getElementById('body'+current);
-  body.classList.remove('open');
-  body.style.display = 'none';
-  updateProgress();
-  if (next) {
-    unlockModule(next);
-    setTimeout(() => {
-      const nb = document.getElementById('body'+next);
-      nb.classList.add('open'); nb.style.display = 'block';
-      document.getElementById('mod'+next).scrollIntoView({behavior:'smooth', block:'start'});
-    }, 300);
-  } else {
-    showCert();
-  }
-}
-
-function unlockModule(n) {
-  const num = document.getElementById('num'+n);
-  num.classList.remove('locked');
-  num.style.background = 'var(--navy)';
-  num.style.color = 'var(--gold)';
-  num.textContent = n;
-  const badge = document.getElementById('badge'+n);
-  badge.className = 'module-badge badge-active';
-  badge.textContent = 'In Progress';
-  const locked = document.getElementById('locked'+n);
-  if (locked) locked.style.display = 'none';
-  const content = document.getElementById('content'+n);
-  if (content) content.style.display = 'block';
-  if (n === 2) startVideoTimer();
-}
-
-function startVideoTimer() {
-  const timer = document.getElementById('videoTimer');
-  videoSeconds = 0;
-  videoInterval = setInterval(() => {
-    videoSeconds++;
-    const rem = VIDEO_DURATION - videoSeconds;
+  let elapsed = 0;
+  if (activeTimers[pageId]) clearInterval(activeTimers[pageId]);
+  activeTimers[pageId] = setInterval(function() {
+    elapsed++;
+    const rem = secs - elapsed;
     if (rem > 0) {
-      timer.textContent = '⏱ ' + rem + 's remaining';
+      spanEl.textContent = rem+'s';
     } else {
-      clearInterval(videoInterval);
-      videoWatched = true;
-      timer.textContent = '✅ Video complete';
-      timer.style.background = 'rgba(26,122,74,0.85)';
-      checkReady(2);
+      clearInterval(activeTimers[pageId]);
+      timerEl.style.background = 'rgba(26,122,74,0.85)';
+      timerEl.innerHTML = '✅ Done';
+      // Directly unlock the next button
+      const modN = pageId.split('-')[0].replace('p','');
+      const pgN = pageId.split('-')[1];
+      const btn = document.getElementById('next'+modN+'-'+pgN);
+      if (btn) btn.classList.add('ready');
     }
   }, 1000);
 }
 
-function updateProgress() {
-  const done = Object.values(completed).filter(Boolean).length;
-  const pct = Math.round((done / 4) * 100);
-  document.getElementById('progressFill').style.width = pct + '%';
-  document.getElementById('progressLabel').textContent = pct + '% Complete';
+function checkPageReady(pageId) {
+  // Find next button for this page
+  const modN = pageId.split('-')[0].replace('p','');
+  const pgN = pageId.split('-')[1];
+  const btn = document.getElementById('next'+modN+'-'+pgN);
+  if (!btn) return;
+
+  const scReqs = SCENARIO_PAGES[pageId];
+  if (scReqs) {
+    // Need all scenarios answered
+    const allDone = scReqs.every(id => scAnswered[id]);
+    if (allDone) btn.classList.add('ready');
+  } else {
+    // Timer-only page
+    const secs = PAGE_TIMERS[pageId];
+    if (!secs) btn.classList.add('ready');
+    // else timer callback handles it
+  }
+}
+
+// ─── SCENARIOS ──────────────────────────────────────────────
+function scAnswer(sc, choice, result) {
+  if (scAnswered[sc]) return;
+  scAnswered[sc] = result === 'correct';
+  const btns = document.querySelectorAll('#sc'+sc+' .choice-btn');
+  btns.forEach(b => b.disabled=true);
+  btns[['A','B','C'].indexOf(choice)].classList.add(result);
+  if (result==='correct') {
+    document.getElementById('sc'+sc+'-correct').classList.add('show');
+  } else {
+    document.getElementById('sc'+sc+'-wrong').classList.add('show');
+    // Highlight correct answer
+    const correctMap = {
+      '1a':1,'1b':1,'2a':1,'2b':1,'3a':1,'3b':1,'4a':1,'4b':1
+    };
+    if (correctMap[sc] !== undefined) btns[correctMap[sc]].classList.add('correct');
+  }
+  // Check if current scenario page is now complete
+  for (const [pgId, scs] of Object.entries(SCENARIO_PAGES)) {
+    if (scs.includes(sc)) checkPageReady(pgId);
+  }
+}
+
+// ─── QUIZ ────────────────────────────────────────────────────
+const correctAnswers = {1:'B',2:'C',3:'D',4:'B',5:'C',6:'B',7:'C',8:'B'};
+const qFeedback = {
+  1: {c:'✅ Correct! MACC was established under the MACC Act 2009.', w:'❌ MACC was established under the Malaysian Anti-Corruption Commission Act 2009.'},
+  2: {c:'✅ Correct! Section 18 covers intending to deceive — including false claims and fraudulent documents.', w:'❌ Section 18 covers false claims and intending to deceive. Section 16 is for receiving bribes, Section 17A is corporate liability, Section 23 is abuse of position.'},
+  3: {c:'✅ Correct! The maximum jail sentence is 20 years per offence.', w:'❌ The maximum is 20 years per offence. Multiple charges can result in even longer total sentences.'},
+  4: {c:'✅ Correct! A facilitation payment is an unofficial payment to speed up a routine government process — strictly prohibited.', w:'❌ A facilitation payment is an unofficial bribe to a government official to speed up a routine process. It is strictly prohibited with no exceptions.'},
+  5: {c:'✅ Correct! All gifts must be declared in the Gift Register regardless of value.', w:'❌ All gifts must be declared regardless of value. There is no threshold below which declaration is not required.'},
+  6: {c:'✅ Correct! Section 17A (introduced by the 2018 Amendment) creates corporate liability for corruption by associated persons.', w:'❌ Section 17A, introduced by the MACC Amendment Act 2018, creates corporate criminal liability for corruption committed by employees or agents.'},
+  7: {c:'✅ Correct! These are major red flags — conflict of interest and inflated fees. Halt and escalate immediately.', w:'❌ A conflict of interest with a government regulator and fees double the market rate are serious red flags. You must halt the engagement and escalate to Risk & Compliance.'},
+  8: {c:'✅ Correct! What you are experiencing is retaliation against a whistleblower — a serious offence. Report it to HR or Compliance immediately.', w:'❌ Retaliation against a whistleblower is a disciplinary and potentially criminal offence. Report it immediately. Never withdraw your original report.'}
+};
+
+function qAnswer(qNum, choice, result) {
+  if (qAnswers[qNum] !== undefined) return;
+  const correct = correctAnswers[qNum];
+  const isCorrect = choice === correct;
+  qAnswers[qNum] = isCorrect ? 'correct' : 'wrong';
+
+  const btns = document.querySelectorAll('#qq'+qNum+' .quiz-opt');
+  btns.forEach(b => b.disabled=true);
+  const choiceIdx = ['A','B','C','D'].indexOf(choice);
+  const correctIdx = ['A','B','C','D'].indexOf(correct);
+  btns[choiceIdx].classList.add(isCorrect ? 'correct' : 'wrong');
+  if (!isCorrect) btns[correctIdx].classList.add('correct');
+
+  const fb = document.getElementById('qf'+qNum);
+  fb.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'wrong');
+  fb.textContent = isCorrect ? qFeedback[qNum].c : qFeedback[qNum].w;
+
+  // Check if all 8 answered
+  if (Object.keys(qAnswers).length === 8) {
+    document.getElementById('quizSubmit').classList.add('ready');
+  }
+}
+
+function submitQuiz() {
+  const correct = Object.values(qAnswers).filter(v => v==='correct').length;
+  const total = 8;
+  const pct = Math.round((correct/total)*100);
+  const passed = pct >= 70;
+
+  const result = document.getElementById('quizResult');
+  document.getElementById('qrIcon').textContent = passed ? '🏆' : '😔';
+  document.getElementById('qrScore').textContent = correct+'/'+total+' ('+pct+'%)';
+  document.getElementById('qrMsg').textContent = passed
+    ? 'Congratulations! You have passed the assessment and completed the training.'
+    : 'You scored below the 70% pass mark. Please review the modules and try again.';
+
+  const btns = document.getElementById('qrBtns');
+  if (passed) {
+    btns.innerHTML = '<button class="qr-claim" onclick="showCert()">🏅 Claim Certificate →</button>';
+  } else {
+    btns.innerHTML = '<button class="qr-retry" onclick="retryQuiz()">↺ Retry Quiz</button>';
+  }
+  result.classList.add('show');
+  result.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function retryQuiz() {
+  // Reset quiz
+  for (let i=1;i<=8;i++) {
+    delete qAnswers[i];
+    const btns = document.querySelectorAll('#qq'+i+' .quiz-opt');
+    btns.forEach(b => { b.disabled=false; b.className='quiz-opt'; });
+    const fb = document.getElementById('qf'+i);
+    fb.className='quiz-feedback'; fb.textContent='';
+  }
+  document.getElementById('quizSubmit').classList.remove('ready');
+  document.getElementById('quizResult').classList.remove('show');
+  document.getElementById('contentQuiz').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// ─── MODULE LOGIC ────────────────────────────────────────────
+function toggleMod(n) {
+  const b = document.getElementById('body'+n);
+  if (!b) return;
+  if (b.classList.contains('open')) { b.classList.remove('open'); b.style.display='none'; }
+  else { b.classList.add('open'); b.style.display='block'; }
+}
+
+function nextPage(modN, pageN) {
+  // Hide current page
+  const pages = document.querySelectorAll('#content'+modN+' .page, #body'+modN+' .page');
+  pages.forEach(p => { p.classList.remove('active'); p.style.display='none'; });
+  // Show next page
+  const next = document.getElementById('p'+modN+'-'+pageN);
+  if (next) {
+    next.classList.add('active');
+    next.style.display='block';
+    next.scrollIntoView({behavior:'smooth',block:'start'});
+    startPageTimer('p'+modN+'-'+pageN);
+    updateDots(modN, pageN);
+  }
+}
+
+function updateDots(modN, activePageN) {
+  // Update dots for all pages in this module
+  const totalPages = {1:4,2:5,3:5,4:3};
+  const total = totalPages[modN] || 0;
+  for (let i=1;i<=total;i++) {
+    const dotContainers = document.querySelectorAll('[id^="dots'+modN+'"]');
+    dotContainers.forEach(container => {
+      container.innerHTML = '';
+      for (let j=1;j<=total;j++) {
+        const d = document.createElement('div');
+        d.className = 'dot' + (j < activePageN ? ' done' : j === activePageN ? ' active' : '');
+        container.appendChild(d);
+      }
+    });
+  }
+}
+
+function completeMod(cur, next) {
+  modCompleted[cur]=true;
+  const num=document.getElementById('num'+cur);
+  if (num) { num.classList.remove('locked'); num.classList.add('done'); num.textContent='✓'; }
+  const badge=document.getElementById('badge'+cur);
+  if (badge) { badge.className='mod-badge b-done'; badge.textContent='✓ Done'; }
+  const body=document.getElementById('body'+cur);
+  if (body) { body.classList.remove('open'); body.style.display='none'; }
+  updateProg();
+  if (next) {
+    unlockMod(next);
+    setTimeout(()=>{
+      const nb=document.getElementById('body'+next);
+      if (nb) { nb.classList.add('open'); nb.style.display='block'; }
+      const mod=document.getElementById('mod'+next);
+      if (mod) mod.scrollIntoView({behavior:'smooth',block:'start'});
+    },300);
+  }
+}
+
+function unlockMod(n) {
+  const num=document.getElementById('num'+n);
+  if (num) { num.classList.remove('locked'); if(n!=='Quiz'){num.style.background='var(--navy)';num.style.color='var(--gold)';num.textContent=n;} else {num.style.background='var(--navy)';} }
+  const badge=document.getElementById('badge'+n);
+  if (badge) { badge.className='mod-badge b-active'; badge.textContent='In Progress'; }
+  const lk=document.getElementById('locked'+n); if(lk) lk.style.display='none';
+  const ct=document.getElementById('content'+n); if(ct) ct.style.display='block';
+  // Start timer for first page
+  if (n!=='Quiz') startPageTimer('p'+n+'-1');
+}
+
+function updateProg() {
+  const mods = [1,2,3,4];
+  const done = mods.filter(m => modCompleted[m]).length;
+  const pct = Math.round((done/4)*100);
+  document.getElementById('progFill').style.width=pct+'%';
+  document.getElementById('progLabel').textContent=pct+'% Complete';
 }
 
 function showCert() {
-  const cert = document.getElementById('cert');
-  cert.classList.add('show');
-  document.getElementById('certDate').textContent =
-    'Completed on ' + new Date().toLocaleDateString('en-GB', {day:'numeric', month:'long', year:'numeric'});
-  document.getElementById('signoffCard').style.display = 'block';
-  cert.scrollIntoView({behavior:'smooth', block:'start'});
-  updateProgress();
+  modCompleted['Quiz']=true;
+  const num=document.getElementById('numQuiz');
+  if(num){num.classList.remove('locked');num.classList.add('done');num.textContent='✓';}
+  const badge=document.getElementById('badgeQuiz');
+  if(badge){badge.className='mod-badge b-done';badge.textContent='✓ Done';}
+  const cert=document.getElementById('cert'); cert.classList.add('show');
+  document.getElementById('certDate').textContent='Completed on '+new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  document.getElementById('signoffCard').style.display='block';
+  cert.scrollIntoView({behavior:'smooth',block:'start'});
+  document.getElementById('progFill').style.width='100%';
+  document.getElementById('progLabel').textContent='100% Complete';
 }
+
+// ─── INIT ────────────────────────────────────────────────────
+// Start timer for first page of module 1
+document.addEventListener('DOMContentLoaded', function() {
+  startPageTimer('p1-1');
+  updateDots(1,1);
+});
 </script>
 </body>
 </html>
